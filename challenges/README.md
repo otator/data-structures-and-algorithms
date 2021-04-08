@@ -13,7 +13,7 @@ time complexety: **O(n)**
 <img src="./assets/array-reverse.png" width ="600px">
 
 
-# Challenge_01 Summary
+# Challenge_02 Summary
 insert a number in the middle of an array 
 
 ## Challenge Description
@@ -31,4 +31,26 @@ time complexety: **O(n)**
 ## Solution
 <img src="./assets/array-shift.jpg" width ="600px">
 
+
+
+
+ # Singly Linked List
+<!-- Short summary or background information -->
+linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory
+
+## Challenge
+<!-- Description of the challenge -->
+create a dynamic list using classes. three methods **insert()**, **includes()**, and **toString()**. had been created.
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- big o for `insert(int <n>)` is O(1)
+- big o for `toString()` and `includes(int <n>)` is O(n);
+
+## API
+<!-- Description of each method publicly available to your Linked List -->
+* `insert(int<n>)` takes in a integer number and insert it in the beggingin of the list at index 0.
+* `includes(int <n>)`takes in an integer and return true if the number found in the list, else it will return false.
+* `toString()` the printout the lineked list elements as: **{4} -> {20} -> {4} -> {5} ->  NULL**
 
