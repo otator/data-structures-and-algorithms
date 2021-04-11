@@ -96,7 +96,7 @@ public class AppTest {
     list.append(-4);
     list.insertAfter(15, 200);
     String expectedOutput  = "{5} -> {10} -> {15} -> {200} -> {99} -> {-4} -> NULL";
-    assertEquals("tests the insertion of element at the middle", expectedOutput, list.toString());
+    assertEquals("tests the insertion of element after the middle", expectedOutput, list.toString());
   }
 
   @Test
@@ -109,8 +109,26 @@ public class AppTest {
     list.append(-4);
     list.insertAfter(-4, 2021);
     String expectedOutput  = "{5} -> {10} -> {15} -> {99} -> {-4} -> {2021} -> NULL";
-    assertEquals("tests the insertion of element at the middle", expectedOutput, list.toString());
+    assertEquals("tests the insertion of element after last element", expectedOutput, list.toString());
+  }
+  @Test
+  public void testDeleteElements(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(5);
+    list.append(10);
+    list.append(15);
+    list.delete(5);
+    list.delete(10);
+    String expectedOutput  = "{15} -> NULL";
+    assertEquals("tests of deleting some elements from the list", expectedOutput, list.toString());
+  }
 
+  @Test
+  public void testDeleteEmptyElement(){
+    FullLinkedList list = new FullLinkedList();
+    list.delete(5);
+    String expectedOutput  = "NULL";
+    assertEquals("tests of deleting from empty list", expectedOutput, list.toString());
   }
 
 

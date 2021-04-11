@@ -34,7 +34,7 @@ time complexety: **O(n)**
 
 
 
- # Singly Linked List
+# Singly Linked List
 <!-- Short summary or background information -->
 linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory
 
@@ -54,3 +54,23 @@ create a dynamic list using classes. three methods **insert()**, **includes()**,
 * `includes(int <n>)`takes in an integer and return true if the number found in the list, else it will return false.
 * `toString()` the printout the lineked list elements as: **{4} -> {20} -> {4} -> {5} ->  NULL**
 
+
+
+# Challenge Summary
+Linked List Insertion is a challenge where we had to insert values in the beginning and at the end, before and after an element.
+
+## Challenge Description
+<!-- Description of the challenge -->
+this challenge was about inserting new values at many positions depends on the following methods:
+* `append(int <value>)` method that takes in a _value_ and append it at the end of the linked list.
+* `insertBefore(int <value>, int <newValue>)` method that inserts _newValue_ immediately before the first _value_.
+* `insertAfter(int<value>, int <newValue>)` method that inserts _newValue_ immediately after the first _value_
+* `delete(int <value>)` method that deletes _value_ from the list.
+All the above methods has been tested in the [AppTest.java](challenges/codes/AppTest.java)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* big o for `append(int <value>)`, `insertBefore(int <value>, int <newValue>)`, `insertAfter(int<value>, int <newValue>)`, and `delete(int <value>)` are O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->
