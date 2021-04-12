@@ -3,12 +3,12 @@ package codes.app.src.main.java.codes;
 public class App {
   public static void main(String[] args){
     FullLinkedList list = new FullLinkedList();
-    list.append(5);
-    list.append(10);
-    list.append(15);
-    list.append(99);
-    list.append(-4);
-    list.insertBefore(5, 2021);
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
     System.out.println(list);
+//    System.out.println("length = " + list.length());
+    System.out.println(list.kthFromEnd(-2));
   }
 }

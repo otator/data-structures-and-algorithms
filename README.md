@@ -8,6 +8,7 @@
 |    Bit Map    |  [challenge_04](https://github.com/otator/bitmap-transformer/blob/main/lab_04/app/src/main/java/lab_04/BitMap.java) |
 |  Linked List  |  [challenge_05](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/LinkedList.java) |
 |Full LinkedList|  [challenge_06](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
+|Full LinkedList|  [challenge_07](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
 
 
 
