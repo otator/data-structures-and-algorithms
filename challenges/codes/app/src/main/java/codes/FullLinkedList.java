@@ -71,4 +71,37 @@ public class FullLinkedList extends LinkedList{
     }
   }
 
+  //helper method to get the length of a linkedlist
+  public int length(){
+    int len = 0;
+    Node current = head;
+    while(current!= null){
+      current = current.next;
+      len++;
+    }
+    return len;
+  }
+
+  public int search(int index){
+    if(index <= this.length() && index >=0)
+      return this.length() - index;
+    return -1;
+  }
+  public Integer kthFromEnd(int index){
+    Node current = head;
+    Integer value = null;
+    int len = this.length()-1;
+    int valueIndex = search(index);
+    if(valueIndex == -1)
+      return value;
+    else{
+      while(len!= index && current.next!= null){
+        len--;
+        current = current.next;
+        value = current.value;
+      }
+      return value;
+    }
+  }
+
 }

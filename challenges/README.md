@@ -74,3 +74,21 @@ All the above methods has been tested in the [AppTest.java](challenges/codes/App
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+
+# Challenge Summary
+<!-- Short summary or background information -->
+find the value at given index from the end
+
+## Challenge Description
+<!-- Description of the challenge -->
+`length()` helper method has been written to get the length of the list (number of elemenst)
+`search (int <index>)` helper method return the index from the end 
+`kthFromEnd(int <index>)` method that loops over the list until meets the index and return the value at that index.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->

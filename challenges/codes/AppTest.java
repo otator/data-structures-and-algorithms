@@ -131,5 +131,50 @@ public class AppTest {
     assertEquals("tests of deleting from empty list", expectedOutput, list.toString());
   }
 
+  @Test
+  public void testKthFromEnd1(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = 2;
+    assertEquals("tests the last element in the list", expected, list.kthFromEnd(0));
+  }
+
+  @Test
+  public void testKthFromEnd2(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = 3;
+    assertEquals("tests the last element in the middle", expected, list.kthFromEnd(2));
+  }
+
+  @Test
+  public void testKthFromEnd3(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = null;
+    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(10));
+  }
+
+
+  @Test
+  public void testKthFromEndNegativeNumber(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = null;
+    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(-2));
+  }
+
 
 }
