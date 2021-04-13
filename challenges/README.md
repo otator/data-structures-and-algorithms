@@ -92,3 +92,22 @@ O(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+# Challenge Summary
+<!-- Short summary or background information -->
+zip two linked list 
+list1: {1} -> {3} -> {2} -> NULL
+list2: {5} -> {9} -> {4} -> NULL
+after calling the function FullLinkedList.zip(list1, list2)
+output: {1} -> {5} -> {3} -> {9} -> {2} -> {4} -> NULL
+
+## Challenge Description
+<!-- Description of the challenge -->
+a static method called `zip(FullLinkedList list1, FullLinkedList list2)` created to zip two linked lists in one linked list
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+space complexity O(1)
+
+## Solution
+<!-- Embedded whiteboard image -->
