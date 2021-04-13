@@ -104,4 +104,24 @@ public class FullLinkedList extends LinkedList{
     }
   }
 
+  public static LinkedList zipLists(LinkedList one, LinkedList two){
+    Node current1 = one.head;
+    Node current2 = two.head;
+    Node temp = current1;
+    while(temp != null || current2 != null){
+      if(temp!=null)
+        temp = temp.next;
+
+      if(current2 != null){
+        current1.next = current2;
+        current2 = current2.next;
+        current1 = current1.next ;
+      }
+      current1.next = temp;
+      current1 = current1.next;
+    }
+    return one;
+  }
+
+
 }
