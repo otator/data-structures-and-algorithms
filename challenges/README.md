@@ -1,5 +1,5 @@
 # Challenge_01 Summary
-reverse an array 
+reverse an array [code](challenges/ArrayReverse.java)
 
 ## Challenge Description
 reverseArray(int[] arr) method that takes in an array and reverse its element and return reversed array.
@@ -14,7 +14,7 @@ time complexety: **O(n)**
 
 
 # Challenge_02 Summary
-insert a number in the middle of an array 
+insert a number in the middle of an array [code](challenges/ArrayShift.java)
 
 ## Challenge Description
 insertShiftArray(int[] arr, int n) method that takes in an array and a number and and insert the number in the array at the miidle
@@ -34,7 +34,7 @@ time complexety: **O(n)**
 
 # Challenge_03 Summary
 <!-- Short summary or background information -->
-search for a value using binary search algorithm
+search for a value using binary search algorithm [code](challenges/codes/app/src/main/java/codes/BinarySearch.java)
 
 ## Challenge Description
 <!-- Description of the challenge -->
