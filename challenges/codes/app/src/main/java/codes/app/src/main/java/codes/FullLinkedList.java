@@ -123,5 +123,57 @@ public class FullLinkedList extends LinkedList{
     return one;
   }
 
+  public int size(FullLinkedList list){
+    int lenght = 0;
+    Node current = head;
+    while (current != null) {
+
+      lenght+=1;
+      current = current.next;
+    }
+    return lenght;
+  }
+
+  public FullLinkedList reverse(FullLinkedList list){
+    FullLinkedList reversedList = new FullLinkedList();
+    Node current = list.head;
+    while (current != null) {
+      insertAtFirst(reversedList, current.value);
+      current = current.next;
+    }
+    return reversedList;
+  }
+
+  public void insertAtFirst(FullLinkedList list, int val){
+    Node value = new Node(val);
+    if(list.head == null){
+      list.head = value;
+    }else{
+      value.next = list.head;
+      list.head = value;
+    }
+  }
+
+  public boolean isPalindrome(FullLinkedList list){
+    if(list.size(list) % 2 == 0)
+      return false;
+    else{
+      FullLinkedList reversed = reverse(list);
+      int length = list.size(list);
+      Node currentList = list.head;
+      Node currentReversed = reversed.head;
+      for(int i=0;i<length; i++){
+        if(currentList.value != currentReversed.value){
+          return false;
+        }
+        currentList = currentList.next;
+        currentReversed = currentReversed.next;
+      }
+      return true;
+    }
+
+
+  }
+
 
 }

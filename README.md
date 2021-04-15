@@ -9,6 +9,9 @@
 |  Linked List  |  [challenge_05](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/LinkedList.java) |
 |Full LinkedList|  [challenge_06](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
 |Full LinkedList|  [challenge_07](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
+|Full LinkedList|  [challenge_08](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
+| Stack |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/satcks_and_queues/app/src/main/java/satcks_and_queues/Stack.java) |
+| Queue |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/satcks_and_queues/app/src/main/java/satcks_and_queues/Queue.java) |
 
 
 
