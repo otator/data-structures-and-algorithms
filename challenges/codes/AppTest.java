@@ -4,6 +4,7 @@
 package codes;
 
 import codes.app.src.main.java.codes.BinarySearch;
+import codes.app.src.main.java.codes.FullLinkedList;
 import codes.app.src.main.java.codes.LinkedList;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -39,6 +40,7 @@ public class AppTest {
      list.insert(4);
      assertEquals("test the values of the list", "{4} -> {5} -> NULL", list.toString());
    }
+
 
    @Test
   public void testArray(){
@@ -98,6 +100,175 @@ public class AppTest {
     int value = 9;
     int actualIndex = BinarySearch.binarySearch(arr, value);
     assertEquals("test empty array must return -1", expectedIndex, actualIndex);
+  }
+
+  @Test
+  public void testOneAtTheEnd(){
+    FullLinkedList list = new FullLinkedList();
+    list.insert(5);
+    list.insert(10);
+    list.insert(15);
+    list.append(99);
+    String expectedOutput = "{15} -> {10} -> {5} -> {99} -> NULL";
+    assertEquals("tests the append of one element at the end", expectedOutput, list.toString());
+  }
+  @Test
+  public void testManyAtTheEnd(){
+    FullLinkedList list = new FullLinkedList();
+    list.insert(5);
+    list.insert(10);
+    list.insert(15);
+    list.append(99);
+    list.append(-4);
+    list.append(2021);
+    String expectedOutput  = "{15} -> {10} -> {5} -> {99} -> {-4} -> {2021} -> NULL";
+    assertEquals("tests the append of many elements at the end", expectedOutput, list.toString());
+  }
+  @Test
+  public void testInsertBeforeTheMiddleElement(){
+    FullLinkedList list = new FullLinkedList();
+    list.insert(5);
+    list.insert(10);
+    list.insert(15);
+    list.append(99);
+    list.insertBefore(5, 117);
+    String expectedOutput  = "{15} -> {10} -> {117} -> {5} -> {99} -> NULL";
+    assertEquals("tests the insertion of element at the middle", expectedOutput, list.toString());
+  }
+
+  @Test
+  public void testInsertBeforeFirstElement(){
+    FullLinkedList list = new FullLinkedList();
+    list.insert(5);
+    list.insert(10);
+    list.insert(15);
+    list.append(99);
+    list.insertBefore(15, 117);
+    String expectedOutput  = "{117} -> {15} -> {10} -> {5} -> {99} -> NULL";
+    assertEquals("tests the insertion of element before the first element", expectedOutput, list.toString());
+  }
+
+  @Test
+  public void testInsertAfterTheMiddle(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(5);
+    list.append(10);
+    list.append(15);
+    list.append(99);
+    list.append(-4);
+    list.insertAfter(15, 200);
+    String expectedOutput  = "{5} -> {10} -> {15} -> {200} -> {99} -> {-4} -> NULL";
+    assertEquals("tests the insertion of element after the middle", expectedOutput, list.toString());
+  }
+
+  @Test
+  public void testInsertAfterTheLastElement(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(5);
+    list.append(10);
+    list.append(15);
+    list.append(99);
+    list.append(-4);
+    list.insertAfter(-4, 2021);
+    String expectedOutput  = "{5} -> {10} -> {15} -> {99} -> {-4} -> {2021} -> NULL";
+    assertEquals("tests the insertion of element after last element", expectedOutput, list.toString());
+  }
+  @Test
+  public void testDeleteElements(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(5);
+    list.append(10);
+    list.append(15);
+    list.delete(5);
+    list.delete(10);
+    String expectedOutput  = "{15} -> NULL";
+    assertEquals("tests of deleting some elements from the list", expectedOutput, list.toString());
+  }
+
+  @Test
+  public void testDeleteEmptyElement(){
+    FullLinkedList list = new FullLinkedList();
+    list.delete(5);
+    String expectedOutput  = "NULL";
+    assertEquals("tests of deleting from empty list", expectedOutput, list.toString());
+  }
+
+  @Test
+  public void testKthFromEnd1(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = 2;
+    assertEquals("tests the last element in the list", expected, list.kthFromEnd(0));
+  }
+
+  @Test
+  public void testKthFromEnd2(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = 3;
+    assertEquals("tests the last element in the middle", expected, list.kthFromEnd(2));
+  }
+
+  @Test
+  public void testKthFromEnd3(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = null;
+    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(10));
+  }
+
+
+  @Test
+  public void testKthFromEndNegativeNumber(){
+    FullLinkedList list = new FullLinkedList();
+    list.append(1);
+    list.append(3);
+    list.append(8);
+    list.append(2);
+    Integer expected = null;
+    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(-2));
+  }
+
+  @Test
+  public void testZipEqual(){
+    FullLinkedList list1 = new FullLinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+    System.out.println(list1);
+
+    FullLinkedList list2 = new FullLinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
+    String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> NULL";
+    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    assertEquals("test two equals linked lists", expected, zip.toString());
+  }
+
+  @Test
+  public void testZipDifferent(){
+    FullLinkedList list1 = new FullLinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+    System.out.println(list1);
+
+    FullLinkedList list2 = new FullLinkedList();
+    list2.append(5);
+    list2.append(9);
+    String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> NULL";
+    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    assertEquals("test two equals linked lists", expected, zip.toString());
   }
 
 }

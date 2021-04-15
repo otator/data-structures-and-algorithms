@@ -1,7 +1,7 @@
-import java.lang.String;
-import java.lang.Override;
-public class LinkedList{
-  public Node head;
+package codes.app.src.main.java.codes;
+
+public class LinkedList {
+  Node head;
   public LinkedList(){
     head = null;
   }
@@ -30,7 +30,6 @@ public class LinkedList{
     Node current = head;
     while(current!= null){
       if(current.value == n){
-        System.out.println(current.value);
         found = true;
         break;
       }
@@ -49,8 +48,5 @@ public class LinkedList{
       current = current.next;
     }
     return result + "NULL";
-  }
-  public Node getHead(){
-    return head;
   }
 }
