@@ -3,6 +3,7 @@
  */
 package codes;
 
+import codes.app.src.main.java.codes.BinarySearch;
 import codes.app.src.main.java.codes.FullLinkedList;
 import codes.app.src.main.java.codes.LinkedList;
 import org.junit.Test;
@@ -13,7 +14,7 @@ public class AppTest {
   public void testInsert(){
      LinkedList list = new LinkedList();
      list.insert(5);
-     assertEquals("test insert into linked list", true, list.includes(5));
+     assertTrue("test insert into linked list", list.includes(5));
    }
    @Test
   public void testIncludes(){
@@ -39,6 +40,67 @@ public class AppTest {
      list.insert(4);
      assertEquals("test the values of the list", "{4} -> {5} -> NULL", list.toString());
    }
+
+
+   @Test
+  public void testArray(){
+     int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+     int expectedIndex = 11;
+     int value = 37;
+     int actualIndex = BinarySearch.binarySearch(arr, value);
+     assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
+   }
+  @Test
+  public void testLastIndexOfArray(){
+    int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+    int expectedIndex = 16;
+    int value = 59;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
+  }
+  @Test
+  public void testFirstIndexOfArray(){
+    int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+    int expectedIndex = 0;
+    int value = 1;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
+  }
+
+  @Test
+  public void testIndexOfOneArrayValue(){
+    int [] arr = {5};
+    int expectedIndex = 0;
+    int value = 5;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test array with one value", expectedIndex, actualIndex);
+  }
+
+  @Test
+  public void testIndexOfTwoArrayValues(){
+    int [] arr = {11,99};
+    int expectedIndex = 1;
+    int value = 99;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test array with two values", expectedIndex, actualIndex);
+  }
+
+  @Test
+  public void testEmpty(){
+    int [] arr = {};
+    int expectedIndex = -1;
+    int value = 10;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test empty array must return -1", expectedIndex, actualIndex);
+  }
+  @Test
+  public void testNotExists(){
+    int [] arr = {2,4,6,8,10};
+    int expectedIndex = -1;
+    int value = 9;
+    int actualIndex = BinarySearch.binarySearch(arr, value);
+    assertEquals("test empty array must return -1", expectedIndex, actualIndex);
+  }
 
   @Test
   public void testOneAtTheEnd(){
@@ -208,7 +270,5 @@ public class AppTest {
     LinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertEquals("test two equals linked lists", expected, zip.toString());
   }
-
-
 
 }

@@ -32,8 +32,26 @@ time complexety: **O(n)**
 <img src="./assets/array-shift.jpg" width ="600px">
 
 
+# Challenge_03 Summary
+<!-- Short summary or background information -->
+search for a value using binary search algorithm
+
+## Challenge Description
+<!-- Description of the challenge -->
+`binarySearch(int[] arr, int value)` method that takes in sorted array and a value and search for the value in the array using binary search algorithm 
+
+and if the value found, its index will be retuned and if the value is not in the array, the method will return -1
 
 
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+binary search algorith time complexity is **O(log2(n))**
+
+## Solution
+<!-- Embedded whiteboard image -->
+<img src="./assets/array-binary-search.png" width ="600px">
+
+ 
 # Singly Linked List
 <!-- Short summary or background information -->
 linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory
