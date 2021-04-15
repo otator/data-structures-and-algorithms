@@ -111,3 +111,56 @@ space complexity O(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+
+# Stacks and Queues
+<!-- Short summary or background information -->
+impelementing stack and queue data structures
+* stack principle is the last element entered will be that first element to go out (LIFO)
+* queue principle is the first element entered will be the first element to go out (FIFO)
+
+## Challenge
+<!-- Description of the challenge -->
+Classes 
+1. [Stack.java](challenges/satcks_and_queues/app/src/main/java/satcks_and_queues/Stack.java) class.
+2. [Queue.java](challenges/satcks_and_queues/app/src/main/java/satcks_and_queues/Queue.java) class
+3. [Node.java](challenges/satcks_and_queues/app/src/main/java/satcks_and_queues/Node.java) class
+4. [AppTest.java](challenges/satcks_and_queues/app/src/test/java/satcks_and_queues/AppTest.java) for testing the above classes methods.
+
+in Stack.java the following method implemeted:
+* `push(int <value>)` pushes a value to the top of the stack
+* `pop()` pops out the top element of the stack(and delete it from the stack)
+* `peek()` view the top element of the stack
+* `isEmpty()` checks wheter the stack is empty or not
+
+in Queue.java the following method implemeted:
+* `enqueue(int <value>)` enqueues a value to the rear of the queue
+* `dequeue()` pops out the front element of the queue(and delete it from the queue)
+* `peek()` view the front element of the queue
+* `isEmpty()` checks wheter the queue is empty or not
+
+in Node.java three fileds had been created to use in stack and queue implementaions
+* int value -> the value of the node
+* Node next -> a pointer that points to the next node in the stack/queue
+* Node previous -> a pointer that points to the previous node in the stack/queue
+
+in [AppTest.java](challenges/satcks_and_queues/app/src/test/java/satcks_and_queues/AppTest.java) class many methods had written to test the functionality of the Stack and Queue classes.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+for stack -> all the methods time complexity is O(1) except `toString()` is O(n)
+for queue -> all the methods time complexity is O(1) except `toString()` is O(n)
+
+## API
+<!-- Description of each method publicly available to your Stack and Queue-->
+**_Stack.java_**
+* `push(int <value>)` pushes a value to the top of the stack
+* `pop()` pops out the top element of the stack(and delete it from the stack)
+* `peek()` view the top element of the stack
+* `isEmpty()` checks wheter the stack is empty or not
+
+**_Queue.java_**
+* `enqueue(int <value>)` enqueues a value to the rear of the queue
+* `dequeue()` pops out the front element of the queue(and delete it from the queue)
+* `peek()` view the front element of the queue
+* `isEmpty()` checks wheter the queue is empty or not
