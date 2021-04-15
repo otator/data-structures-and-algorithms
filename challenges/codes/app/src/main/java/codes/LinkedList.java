@@ -2,8 +2,10 @@ package codes.app.src.main.java.codes;
 
 public class LinkedList {
   Node head;
+  int length;
   public LinkedList(){
     head = null;
+    length = 0;
   }
 
   static class Node{
@@ -23,6 +25,7 @@ public class LinkedList {
       node.next = head;
       head = node;
     }
+    length++;
   }
 
   public boolean includes(int n){

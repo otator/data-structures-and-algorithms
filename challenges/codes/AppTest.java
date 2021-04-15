@@ -138,7 +138,7 @@ public class AppTest {
     list.append(3);
     list.append(8);
     list.append(2);
-    Integer expected = 2;
+    int expected = 2;
     assertEquals("tests the last element in the list", expected, list.kthFromEnd(0));
   }
 
@@ -149,7 +149,7 @@ public class AppTest {
     list.append(3);
     list.append(8);
     list.append(2);
-    Integer expected = 3;
+    int expected = 3;
     assertEquals("tests the last element in the middle", expected, list.kthFromEnd(2));
   }
 
@@ -160,8 +160,8 @@ public class AppTest {
     list.append(3);
     list.append(8);
     list.append(2);
-    Integer expected = null;
-    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(10));
+    int expected = -1;
+    assertEquals("tests not found index which must return -1", expected, list.kthFromEnd(10));
   }
 
 
@@ -172,9 +172,14 @@ public class AppTest {
     list.append(3);
     list.append(8);
     list.append(2);
-    Integer expected = null;
-    assertEquals("tests not found index which must return null", expected, list.kthFromEnd(-2));
+    int expected = -1;
+    assertEquals("tests not found index which must return -1", expected, list.kthFromEnd(-2));
   }
 
-
+  @Test
+  public void testKthFromEndEmptyList() {
+    FullLinkedList list = new FullLinkedList();
+    int expected = -1;
+    assertEquals("tests not found index which must return -1", expected, list.kthFromEnd(0));
+  }
 }

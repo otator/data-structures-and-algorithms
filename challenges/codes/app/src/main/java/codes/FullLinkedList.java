@@ -16,6 +16,7 @@ public class FullLinkedList extends LinkedList{
       }
       current.next = value;
     }
+    length++;
   }
 
   public void insertAfter(int value, int newValue){
@@ -30,6 +31,7 @@ public class FullLinkedList extends LinkedList{
       }
       n.next = current.next;
       current.next = n;
+      length++;
     }
   }
 
@@ -49,6 +51,7 @@ public class FullLinkedList extends LinkedList{
         }
         n.next = current.next;
         current.next = n;
+        length++;
       }
     }
   }
@@ -61,6 +64,7 @@ public class FullLinkedList extends LinkedList{
     //if the value trying to delete is the first value
     else if(head.value == value){
       head = head.next;
+      length--;
     }
     else{
       Node current = head;
@@ -68,6 +72,7 @@ public class FullLinkedList extends LinkedList{
         current = current.next;
       }
       current.next = current.next.next;
+      length--;
     }
   }
 
@@ -87,21 +92,34 @@ public class FullLinkedList extends LinkedList{
       return this.length() - index;
     return -1;
   }
-  public Integer kthFromEnd(int index){
-    Node current = head;
-    Integer value = null;
-    int len = this.length()-1;
-    int valueIndex = search(index);
-    if(valueIndex == -1)
-      return value;
-    else{
-      while(len!= index && current.next!= null){
-        len--;
-        current = current.next;
-        value = current.value;
-      }
-      return value;
+//  public Integer kthFromEnd(int index){
+//    Node current = head;
+//    Integer value = null;
+//    int len = this.length()-1;
+//    int valueIndex = search(index);
+//    if(valueIndex == -1)
+//      return value;
+//    else{
+//      while(len!= index && current.next!= null){
+//        len--;
+//        current = current.next;
+//        value = current.value;
+//      }
+//      return value;
+//    }
+//  }
+
+  public int kthFromEnd(int index) {
+    if (head == null)
+      return -1;
+    if (index > length-1 || index < 0) {
+      return -1;
     }
+    int valueIndexFromEnd = length - index;
+    Node current = head;
+    for (int i = 1; i < valueIndexFromEnd; i++)
+      current = current.next;
+    return current.value;
   }
 
 }
