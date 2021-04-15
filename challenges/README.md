@@ -54,7 +54,7 @@ binary search algorith time complexity is **O(log2(n))**
  
 # Singly Linked List
 <!-- Short summary or background information -->
-linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory
+linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory [code](challenges/LinkedList.java)
 
 ## Challenge
 <!-- Description of the challenge -->
