@@ -8,6 +8,6 @@ public class App {
     list.append(8);
     list.append(2);
     System.out.println(list);
-    System.out.println(list.kthFromEnd(4));
+    System.out.println(list.kthFromEnd(0));
   }
 }

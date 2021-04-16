@@ -1,6 +1,6 @@
 package codes.app.src.main.java.codes;
 
-public class FullLinkedList extends LinkedList{
+public class FullLinkedList extends LinkedList {
   public FullLinkedList(){
     super();
   }
