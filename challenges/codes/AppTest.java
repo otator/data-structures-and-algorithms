@@ -244,12 +244,13 @@ public class AppTest {
     int expected = -1;
     assertEquals("tests not found index which must return -1", expected, list.kthFromEnd(0));
   }
+
+  @Test
   public void testZipEqual(){
     FullLinkedList list1 = new FullLinkedList();
     list1.append(1);
     list1.append(3);
     list1.append(2);
-    System.out.println(list1);
 
     FullLinkedList list2 = new FullLinkedList();
     list2.append(5);
@@ -266,14 +267,53 @@ public class AppTest {
     list1.append(1);
     list1.append(3);
     list1.append(2);
-    System.out.println(list1);
 
     FullLinkedList list2 = new FullLinkedList();
     list2.append(5);
     list2.append(9);
-    String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> NULL";
+    list2.append(4);
+    list2.append(100);
+    String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> {100} -> NULL";
     LinkedList zip = FullLinkedList.zipLists(list1, list2);
-    assertEquals("test two equals linked lists", expected, zip.toString());
+    assertEquals("test two different linked lists in length", expected, zip.toString());
   }
+
+  @Test
+  public void testOneNull(){
+    FullLinkedList list1 = new FullLinkedList();
+
+    FullLinkedList list2 = new FullLinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(4);
+    list2.append(100);
+    String expected = "{5} -> {9} -> {4} -> {100} -> NULL";
+
+    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    assertEquals("test one empty linked lists",expected,zip.toString());
+  }
+  @Test
+  public void testOneNull2(){
+    FullLinkedList list1 = new FullLinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(2);
+
+    FullLinkedList list2 = new FullLinkedList();
+
+    String expected = "{1} -> {3} -> {2} -> NULL";
+    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    assertEquals("test one empty linked lists",expected,zip.toString());
+  }
+
+  @Test
+  public void testTwoNulls(){
+    FullLinkedList list1 = new FullLinkedList();
+    FullLinkedList list2 = new FullLinkedList();
+
+    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    assertNull("test two empty linked lists",zip);
+  }
+
 
 }

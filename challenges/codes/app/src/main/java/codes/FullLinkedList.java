@@ -76,7 +76,7 @@ public class FullLinkedList extends LinkedList {
     }
   }
 
-  //helper method to get the length of a linkedlist
+  //helper method to get the length of a linked list
   public int length(){
     int len = 0;
     Node current = head;
@@ -87,27 +87,7 @@ public class FullLinkedList extends LinkedList {
     return len;
   }
 
-  public int search(int index){
-    if(index <= this.length() && index >=0)
-      return this.length() - index;
-    return -1;
-  }
-//  public Integer kthFromEnd(int index){
-//    Node current = head;
-//    Integer value = null;
-//    int len = this.length()-1;
-//    int valueIndex = search(index);
-//    if(valueIndex == -1)
-//      return value;
-//    else{
-//      while(len!= index && current.next!= null){
-//        len--;
-//        current = current.next;
-//        value = current.value;
-//      }
-//      return value;
-//    }
-//  }
+
 
   public int kthFromEnd(int index) {
     if (head == null)
@@ -122,25 +102,25 @@ public class FullLinkedList extends LinkedList {
     return current.value;
   }
 
-  public static LinkedList zipLists(LinkedList one, LinkedList two){
-    Node current1 = one.head;
-    Node current2 = two.head;
-    Node temp = current1;
-    while(temp != null || current2 != null){
-      if(temp!=null)
-        temp = temp.next;
-
-      if(current2 != null){
-        current1.next = current2;
-        current2 = current2.next;
-        current1 = current1.next ;
-      }
-      current1.next = temp;
-      current1 = current1.next;
-    }
-    return one;
-  }
-
+//  public static LinkedList zipLists(LinkedList one, LinkedList two){
+//    Node current1 = one.head;
+//    Node current2 = two.head;
+//    Node temp = current1;
+//    while(temp != null || current2 != null){
+//      if(temp!=null)
+//        temp = temp.next;
+//
+//      if(current2 != null){
+//        current1.next = current2;
+//        current2 = current2.next;
+//        current1 = current1.next ;
+//      }
+//      current1.next = temp;
+//      current1 = current1.next;
+//    }
+//    return one;
+//  }
+//
   public int size(FullLinkedList list){
     int lenght = 0;
     Node current = head;
@@ -151,6 +131,76 @@ public class FullLinkedList extends LinkedList {
     }
     return lenght;
   }
+
+  public static LinkedList zipLists(LinkedList one, LinkedList two){
+      if(one.head == null && two.head == null)
+        return null;
+      else if(one.head == null)
+        return two;
+      else if(two.head == null){
+        return one;
+      }
+      else{
+        Node current1 = one.head;
+        Node current2 = two.head;
+        Node temp = one.head;
+        boolean found1 = false;
+        boolean found2 = false;
+        int len = Math.max(one.length, two.length);
+        for(int i=0; i<len; i++){
+          if(current1.next==null){
+            found1 = true;
+            break;
+          }
+          if(current2.next == null){
+            current1.next = current2;
+            found2 = true;
+            break;
+          }
+          if(temp!= null){
+            temp = temp.next;
+            current1.next = current2;
+
+            current2 = current2.next;
+
+            current1 = current1.next;
+            current1.next = temp;
+            current1 = current1.next;
+          }
+        }
+        if(found1)
+          current1.next = current2;
+        if (found2){
+          temp = temp.next;
+          current1.next = temp;
+        }
+
+
+        return one;
+      }
+  }
+
+
+//  public static LinkedList zipLists(LinkedList one, LinkedList two){
+//    if(one.head == null && two.head == null)
+//      return null;
+//    else if(one.head == null)
+//      return two;
+//    else if(two.head == null){
+//      return one;
+//    }
+//    else{
+//     Node current1 = one.head;
+//     Node current2 = two.head;
+//     Node temp = one.head;
+//
+//     while(current1!= null && current2!=null){
+//
+//     }
+//      return one;
+//    }
+//  }
+
 
   public FullLinkedList reverse(FullLinkedList list){
     FullLinkedList reversedList = new FullLinkedList();

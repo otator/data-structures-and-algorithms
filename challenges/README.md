@@ -56,7 +56,7 @@ binary search algorith time complexity is **O(log2(n))**
 <!-- Short summary or background information -->
 linked list unlike arrays itis the basic dynamic way to store data with the limit of the memory [code](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/app/src/main/java/codes/LinkedList.java)
 
-## Challenge
+## Challenge_05
 <!-- Description of the challenge -->
 create a dynamic list using classes. three methods **insert()**, **includes()**, and **toString()**. had been created.
 
@@ -74,7 +74,7 @@ create a dynamic list using classes. three methods **insert()**, **includes()**,
 
 
 
-# Challenge Summary
+# Challenge_6 Summary
 Linked List Insertion is a challenge where we had to insert values in the beginning and at the end, before and after an element.
 
 ## Challenge Description
@@ -94,7 +94,7 @@ All the above methods has been tested in the [AppTest.java](challenges/codes/App
 <!-- Embedded whiteboard image -->
 
 
-# Challenge Summary
+# Challenge_07 Summary
 <!-- Short summary or background information -->
 find the value at given index from the end
 
@@ -109,10 +109,10 @@ time complexity is **O(n)** for the worst case, if the passed index is 0 needs t
 ## Solution
 <!-- Embedded whiteboard image -->
 
-<img src="./assets/ll-kth-from-end.png">
+<img src="./assets/ll-kth-from-end.png" width="600px">
 
 
-# Challenge Summary
+# Challenge_8 Summary
 <!-- Short summary or background information -->
 zip two linked list 
 list1: {1} -> {3} -> {2} -> NULL
@@ -122,14 +122,17 @@ output: {1} -> {5} -> {3} -> {9} -> {2} -> {4} -> NULL
 
 ## Challenge Description
 <!-- Description of the challenge -->
-a static method called `zip(FullLinkedList list1, FullLinkedList list2)` created to zip two linked lists in one linked list
+a static method called `zip(FullLinkedList list1, FullLinkedList list2)` created to zip(merge) two linked lists in one linked list
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-space complexity O(1)
+space complexity **O(1)** and time complexity is **O(n)**
 
 ## Solution
 <!-- Embedded whiteboard image -->
+<img src="./assets/ll-zip.png" width="600px">
+
+
 
 
 # Stacks and Queues
