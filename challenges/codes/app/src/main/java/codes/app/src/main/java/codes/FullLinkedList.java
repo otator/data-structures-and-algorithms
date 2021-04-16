@@ -122,4 +122,76 @@ public class FullLinkedList extends LinkedList{
     return current.value;
   }
 
+  public static LinkedList zipLists(LinkedList one, LinkedList two){
+    Node current1 = one.head;
+    Node current2 = two.head;
+    Node temp = current1;
+    while(temp != null || current2 != null){
+      if(temp!=null)
+        temp = temp.next;
+
+      if(current2 != null){
+        current1.next = current2;
+        current2 = current2.next;
+        current1 = current1.next ;
+      }
+      current1.next = temp;
+      current1 = current1.next;
+    }
+    return one;
+  }
+
+  public int size(FullLinkedList list){
+    int lenght = 0;
+    Node current = head;
+    while (current != null) {
+
+      lenght+=1;
+      current = current.next;
+    }
+    return lenght;
+  }
+
+  public FullLinkedList reverse(FullLinkedList list){
+    FullLinkedList reversedList = new FullLinkedList();
+    Node current = list.head;
+    while (current != null) {
+      insertAtFirst(reversedList, current.value);
+      current = current.next;
+    }
+    return reversedList;
+  }
+
+  public void insertAtFirst(FullLinkedList list, int val){
+    Node value = new Node(val);
+    if(list.head == null){
+      list.head = value;
+    }else{
+      value.next = list.head;
+      list.head = value;
+    }
+  }
+
+  public boolean isPalindrome(FullLinkedList list){
+    if(list.size(list) % 2 == 0)
+      return false;
+    else{
+      FullLinkedList reversed = reverse(list);
+      int length = list.size(list);
+      Node currentList = list.head;
+      Node currentReversed = reversed.head;
+      for(int i=0;i<length; i++){
+        if(currentList.value != currentReversed.value){
+          return false;
+        }
+        currentList = currentList.next;
+        currentReversed = currentReversed.next;
+      }
+      return true;
+    }
+
+
+  }
+
+
 }

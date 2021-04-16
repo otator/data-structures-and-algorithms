@@ -33,7 +33,6 @@ public class LinkedList {
     Node current = head;
     while(current!= null){
       if(current.value == n){
-        System.out.println(current.value);
         found = true;
         break;
       }
