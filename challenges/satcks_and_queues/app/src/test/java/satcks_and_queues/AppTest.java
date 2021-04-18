@@ -3,6 +3,8 @@
  */
 package satcks_and_queues;
 
+import codes.app.src.main.stacksandqueues.Queue;
+import codes.app.src.main.stacksandqueues.Stack;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -26,5 +26,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'satcks_and_queues.App'
+    mainClass = 'satcks_and_queues.app.src.main.java.codes.app.src.main.stacksandqueues.App'
 }

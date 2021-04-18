@@ -186,3 +186,35 @@ for queue -> all the methods time complexity is O(1) except `toString()` is O(n)
 * `dequeue()` pops out the front element of the queue(and delete it from the queue)
 * `peek()` view the front element of the queue
 * `isEmpty()` checks wheter the queue is empty or not
+
+
+
+# Challenge Summary
+<!-- Short summary or background information -->
+implement a queue using two stacks
+
+## Challenge Description
+<!-- Description of the challenge -->
+using two instances of class [Stack.java](challenges/codes/app/src/main/stacksandqueues/Stack.java) to impelement queue.
+
+in [PseudoQueue.java](challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) class queue structure had been implemented with the following methods:
+* `enqueue(int <value>)` methods that takes in a value and push it to the first stack
+* `dequeue()` method that get the first element that entered the first stack and this done as follow:
+  * push the first stack contenet into the second class
+  * pop the first element of the stack two which is the same element of stack one
+  * after that, push stack two content into stack one.
+  * this makes the two stacks performs as queue
+
+in [AppTest.java](challenges/codes/AppTest.java) class the [PseudoQueue.java](challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) functionality had been tested
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+since we had to create a new stack to hold the others content temprory the space complexity was **O(n)**
+
+
+the time complexity is **O(n)** because we are looping over the whole stack.
+
+## Solution
+<!-- Embedded whiteboard image -->
+<img src="./assets/queue-with-stacks.png" width="600px">
+

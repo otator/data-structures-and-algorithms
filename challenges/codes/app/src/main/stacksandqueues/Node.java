@@ -1,4 +1,4 @@
-package satcks_and_queues;
+package codes.app.src.main.stacksandqueues;
 
 public class Node {
   int value;
