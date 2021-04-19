@@ -223,9 +223,9 @@ public class FullLinkedList extends LinkedList {
   }
 
   public boolean isPalindrome(FullLinkedList list){
-    if(list.size(list) % 2 == 0)
-      return false;
-    else{
+//    if(list.size(list) % 2 == 0)
+//      return false;
+//    else{
       FullLinkedList reversed = reverse(list);
       int length = list.size(list);
       Node currentList = list.head;
@@ -238,7 +238,7 @@ public class FullLinkedList extends LinkedList {
         currentReversed = currentReversed.next;
       }
       return true;
-    }
+//    }
 
 
   }
