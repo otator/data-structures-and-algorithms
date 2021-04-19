@@ -189,7 +189,7 @@ for queue -> all the methods time complexity is O(1) except `toString()` is O(n)
 
 
 
-# Challenge Summary
+# Challenge_11 Summary
 <!-- Short summary or background information -->
 implement a queue using two stacks
 
@@ -217,4 +217,29 @@ the time complexity is **O(n)** because we are looping over the whole stack.
 ## Solution
 <!-- Embedded whiteboard image -->
 <img src="./assets/queue-with-stacks.png" width="600px">
+
+
+
+# Challenge_12 Summary
+<!-- Short summary or background information -->
+using a queue with First In First Out (**FIFO**) an animal shelter has been implemented
+
+## Challenge Description
+<!-- Description of the challenge -->
+in class [AnimalShelter.java](challenges/codes/app/src/main/utilites/AnimalShelter.java) the following methods implemented:
+
+* `enqueue(String <animal>)` this methods add cats and dogs only in the shelter
+* `dequeue(String <animal>)` this method return a cat or dog from the shelter if found
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+* space complexity is O(1) => there is not new space allocated
+* time complexity is O(n) => because of the looping over the all queue in the worst case.
+
+
+## Solution
+<!-- Embedded whiteboard image -->
+<img src="./assets/fifo-animal-shelter.png" width="600px">
 

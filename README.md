@@ -13,7 +13,7 @@
 | Stack |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/Stack.java) |
 | Queue |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/Queue.java) |
 | PseudoQueue | [challenge_11](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) |
-
+| AnimalShelter | [challenge_12](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/AnimalShelter.java) |
 
 
 
