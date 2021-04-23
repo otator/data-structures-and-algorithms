@@ -24,7 +24,7 @@ public class BinarySearchTree extends Tree{
         while (temp!= null) {
           if(node.value < temp.value  && temp.left == null)
             temp.left = node;
-          
+
         }
         temp.left = node;
       }else{
