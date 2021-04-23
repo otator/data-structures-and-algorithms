@@ -6,17 +6,21 @@ package codes.app.src.main.stacksandqueues;
 public class App {
 
     public static void main(String[] args) {
-      PseudoQueue queue = new PseudoQueue();
-      queue.enqueue(10);
-      queue.enqueue(15);
-      queue.enqueue(20);
-//      System.out.println(queue.dequeue());
-      System.out.println(queue);
-      queue.dequeue();
-      System.out.println(queue);
-      queue.dequeue();
-      System.out.println(queue);
-      queue.dequeue();
-      System.out.println(queue);
+      Stack s1 = new Stack();
+//      s1.push(100);
+//      s1.push(20);
+//      s1.push(4);
+//      s1.push(0);
+//      s1.push(50);
+//      s1.push(10);
+//      s1.push(99);
+//      s1.pop();
+//      s1.pop();
+//      s1.pop();
+      System.out.println("max is: " + s1.maxStack.peek());
+      System.out.println("---------------");
+      System.out.println(s1);
+      System.out.println("---------------");
+      System.out.println(s1.maxStack);
     }
 }
