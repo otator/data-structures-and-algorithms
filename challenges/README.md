@@ -243,3 +243,25 @@ in class [AnimalShelter.java](challenges/codes/app/src/main/utilites/AnimalShelt
 <!-- Embedded whiteboard image -->
 <img src="./assets/fifo-animal-shelter.png" width="600px">
 
+
+
+# Challenge_13 Summary
+<!-- Short summary or background information -->
+check whether a string have a balanced brackets or not
+
+## Challenge Description
+<!-- Description of the challenge -->
+
+in class [MultiBracketValidation.java](challenges/codes/app/src/main/utilites/MultiBracketValidation.java) a method called `multiBracketValidation` created to check if a string has balanced brackets or not
+
+this method uses helper method that has been created within [Stack.java]((challenges/codes/app/src/main/utilites/Stack) named `popUntil(String <value>)`, this method pops all the values until meet the input value and pop it as well
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+time complexity is O(n) -> loop over the string
+space complexity is O(n) -> create a stack to push the string in.
+
+## Solution
+<!-- Embedded whiteboard image -->
+
+<img src="./assets/multi-brackets-validation.png" width="600px">
