@@ -3,7 +3,7 @@ package codes.app.src.main.tree;
 import codes.app.src.main.java.codes.BinarySearch;
 
 public class BinarySearchTree extends Tree{
-  Node root;
+  public Node root;
   public BinarySearchTree(){
     super();
   }
@@ -19,19 +19,22 @@ public class BinarySearchTree extends Tree{
     }
     else{
       Node temp = root;
-      if(node.value < temp.value) {
-        temp = temp.left;
-        while (temp!= null) {
-          if(node.value < temp.value  && temp.left == null)
-            temp.left = node;
-
-        }
-        temp.left = node;
-      }else{
-        while(temp.right != null){
+      Node parent;
+      while(true){
+        parent = temp;
+        if(temp.value < value){ //left side
+          temp = temp.left;
+          if(temp == null) {
+            parent.left = node;
+            return;
+          }
+        }else{ //right side
           temp = temp.right;
+          if(temp == null){
+            parent.right = node;
+            return;
+          }
         }
-        temp.right = node;
       }
     }
   }//end add()

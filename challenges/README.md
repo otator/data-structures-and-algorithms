@@ -265,3 +265,82 @@ space complexity is O(n) -> create a stack to push the string in.
 <!-- Embedded whiteboard image -->
 
 <img src="./assets/multi-brackets-validation.png" width="600px">
+
+
+# Trees
+<!-- Short summary or background information -->
+A tree is a collection of nodes each node has a value and it is aware of its parent and its children nodes.
+
+Each tree must have a root.
+
+the path between nodes in tree called *edges* and it is the height of the tree.
+
+the node that does not have any children called *leaf*
+
+Binary Search Tree (BST) is a special type of trees where each node has only to nodes (left and right nodes), and it is used to for search becuase of the fast performance for its structure, where each time the half of the tree cancelled for the search which leads to time complexity **O(log2(N))**
+
+
+## Challenge_15
+<!-- Description of the challenge -->
+implement a binary search tree
+
+[Node](challenges/codes/app/src/main/tree/Node.java) class that has left, right nodes and a value choosen to be the node of the tree.
+
+inside [Tree](challenges/codes/app/src/main/tree/Tree.java) class the three traversals has been implemented:
+* Pre-order 
+* In-order
+* Post-order
+
+all the three traversals used recursion to traverse over the tree.
+
+class [BinarySearchTree](challenges/codes/app/src/main/tree/BinarySearchTree.java) inherits the tree class, and it has the `add(Integer <value>)` method
+
+that adds a node to the tree.
+
+and `isEmpty()` to check whether the tree is empty or not
+
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+time complexity is **O(n)** for traversal because all the nodes will be visited
+
+## API (Binary Search Tree)
+<!-- Description of each method publicly available in each of your trees -->
+
+* create an instsance of Binary Search Tree class
+
+    `BinarySearchTree binarySearchTree = new BinarySearchTree();`
+
+* add a node to the tree
+
+    `binarySearchTree.add(15);`
+
+* for pre-order traversal call the method `preOrder` and pass it the tree root as an argument.
+
+    `binarySearchTree.preOrder(binarySearchTree.root);`
+
+    * to print the pre-order traversal
+
+      `System.out.println(binarySearchTree.preOrderList);`
+
+* for in-order traversal call the method `inOrder` and pass it the tree root as an argument.
+
+    `binarySearchTree.inOrder(binarySearchTree.root);`
+
+    * to print the in-order traversal
+
+      `System.out.println(binarySearchTree.inOrderList);`
+
+* for post-order traversal call the method `postOrder` and pass it the tree root as an argument.
+
+    `binarySearchTree.postOrder(binarySearchTree.root);`
+
+    * to print the post-order traversal
+
+      `System.out.println(binarySearchTree.postOrderList);`
+
+* check if the tree is empty
+
+`binarySearchTree.isEmpty(); // returns true or false`
