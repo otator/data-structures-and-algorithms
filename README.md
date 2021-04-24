@@ -15,6 +15,9 @@
 | PseudoQueue.java | [challenge_11](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) |
 | AnimalShelter | [challenge_12](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/AnimalShelter.java) |
 | BracketsValidation.java | [challenge_13](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/MultiBracketValidation.java) |
+| BinarySearchTree.java | [challenge_15](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/BinarySearchTree.java) |
+| Tree.java | [challenge_15](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/Tree.java) |
+
 
 
 
