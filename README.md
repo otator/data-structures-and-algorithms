@@ -12,8 +12,11 @@
 |Full LinkedList|  [challenge_08](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/java/codes/FullLinkedList.java) |
 | Stack |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/Stack.java) |
 | Queue |  [challenge_10](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/Queue.java) |
-| PseudoQueue | [challenge_11](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) |
+| PseudoQueue.java | [challenge_11](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/stacksandqueues/PseudoQueue.java) |
 | AnimalShelter | [challenge_12](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/AnimalShelter.java) |
+| BracketsValidation.java | [challenge_13](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/MultiBracketValidation.java) |
+
+
 
 
 
