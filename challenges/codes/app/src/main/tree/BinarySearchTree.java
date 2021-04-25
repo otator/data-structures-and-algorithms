@@ -22,7 +22,7 @@ public class BinarySearchTree extends Tree{
       Node parent;
       while(true){
         parent = temp;
-        if(temp.value < value){ //left side
+        if(value < temp.value){ //left side
           temp = temp.left;
           if(temp == null) {
             parent.left = node;
@@ -38,6 +38,22 @@ public class BinarySearchTree extends Tree{
       }
     }
   }//end add()
+
+  public boolean contains(Integer value, Node root){
+    if (root == null)
+      return false;
+    Node temp = root;
+    while (!temp.value.equals(value)){
+      if(value < temp.value)
+        temp = temp.left;
+      else
+        temp = temp.right;
+
+      if (temp == null)
+        return false;
+    }
+    return true;
+  }
 
   private String result = "root ➔ ";
   public void getTree(Node root){

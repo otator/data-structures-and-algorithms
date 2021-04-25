@@ -572,7 +572,7 @@ public class AppTest {
 
   @Test
   public void testMultiBracketValidationCode8(){
-    String code = "{(})";
+    String code = "{{(})}";
     assertFalse("must return false for NOT balanced brackets", MultiBracketValidation.multiBracketValidation(code));
   }
 
@@ -611,7 +611,7 @@ public class AppTest {
     tree.add(0);
     tree.add(13);
     tree.add(18);
-    String output = "root ➔ 15 ➔ 20 ➔ 18 ➔ 12 ➔ 13 ➔ 0 ➔  leaf";
+    String output = "root ➔ 15 ➔ 12 ➔ 0 ➔ 13 ➔ 20 ➔ 18 ➔  leaf";
     assertEquals("test the root value, must return true", output, tree.toString());
   }
 
@@ -675,5 +675,35 @@ public class AppTest {
     list.add(15);
     tree.postOrder(tree.root);
     assertEquals("tests post-order traversal", list, tree.postOrderList);
+  }
+
+  @Test
+  public void testContainsTrue(){
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(15);
+    tree.add(12);
+    tree.add(20);
+    tree.add(0);
+    tree.add(13);
+    tree.add(18);
+    assertTrue("test that a value exists in tree", tree.contains(20, tree.root));
+  }
+
+  @Test
+  public void testContainsFasle(){
+    BinarySearchTree tree = new BinarySearchTree();
+    tree.add(15);
+    tree.add(12);
+    tree.add(20);
+    tree.add(0);
+    tree.add(13);
+    tree.add(18);
+    assertFalse("test that a value NOT  exists in tree", tree.contains(99, tree.root));
+  }
+
+  @Test
+  public void testContainsEmpty(){
+    BinarySearchTree tree = new BinarySearchTree();
+    assertFalse("test that a value exists in empty tree", tree.contains(99, tree.root));
   }
 }

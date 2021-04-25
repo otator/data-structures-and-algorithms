@@ -299,6 +299,8 @@ that adds a node to the tree.
 
 and `isEmpty()` to check whether the tree is empty or not
 
+`contains(Integer <value>, <tree.root> )` method that returns if the value exists in the tree or not
+
 
 
 ## Approach & Efficiency
@@ -315,7 +317,7 @@ time complexity is **O(n)** for traversal because all the nodes will be visited
 
 * add a node to the tree
 
-    `binarySearchTree.add(15);`
+    `binarySearchTree.add(Integer <value>);`
 
 * for pre-order traversal call the method `preOrder` and pass it the tree root as an argument.
 
@@ -344,3 +346,7 @@ time complexity is **O(n)** for traversal because all the nodes will be visited
 * check if the tree is empty
 
 `binarySearchTree.isEmpty(); // returns true or false`
+
+* check whether a tree contains a value
+
+`binarySearchTree.contains(Integer <value>, binarySearchTree.root);`
