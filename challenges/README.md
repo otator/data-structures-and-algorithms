@@ -1,3 +1,10 @@
+<style>
+img{
+  border-radius: 10px;
+}
+</style>
+
+
 # Challenge_01 Summary
 reverse an array [code](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/ArrayReverse.java)
 
@@ -350,3 +357,31 @@ time complexity is **O(n)** for traversal because all the nodes will be visited
 * check whether a tree contains a value
 
 `binarySearchTree.contains(Integer <value>, binarySearchTree.root);`
+
+
+# Challenge_16 Summary
+<!-- Short summary or background information -->
+find the maximum value of a binary tree
+
+## Challenge Description
+<!-- Description of the challenge -->
+method `findMaximumValue(Node <root>)` will return the maximum value of the tree
+
+at first the maximum is the root then traverse over the tree
+
+the pre-order traversal used in this case to visit all the tree nodes
+
+for each node, we compare the value of it with the maximum, if it is bigger then update the maximum value
+
+until all the nodes are visited and then return the maximum value.
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+time complexity is **O(n)** because all the nodes will be visited
+space complexity is **O(1)** because searching for the max value in tree does not allocate extra space
+
+## Solution
+<!-- Embedded whiteboard image -->
+
+<img src="./assets/find-maximum-binary-tree.png" width="600px">
