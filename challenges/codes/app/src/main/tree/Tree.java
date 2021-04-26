@@ -1,7 +1,5 @@
 package codes.app.src.main.tree;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 
 public class Tree {
@@ -57,6 +55,28 @@ public class Tree {
 
     findMaximumValue(root.left);
     findMaximumValue(root.right);
+  }
+  public Queue queueOfBreadthFirst = new Queue();
+  // for test only
+  public ArrayList<Integer> listOfBreadthFirst = new ArrayList<>();
+  public void breadthFirst(Node root){
+    if(root == null)
+      return;
+    queueOfBreadthFirst.enqueue(root);
+    Node front;
+    while (queueOfBreadthFirst.peek() != null){
+      front = queueOfBreadthFirst.dequeue();
+//      System.out.print(front.value+" ");
+      listOfBreadthFirst.add(front.value);
+
+      if(front.left != null)
+        queueOfBreadthFirst.enqueue(front.left);
+
+      if(front.right != null)
+        queueOfBreadthFirst.enqueue(front.right);
+
+    }
+
   }
 
 }
