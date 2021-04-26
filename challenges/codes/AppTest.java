@@ -752,4 +752,66 @@ public class AppTest {
     Integer expected = Integer.MIN_VALUE;
     assertEquals("tests the max value in empty tree, the max will be the minimum value of Integer", expected, tree.max);
   }
+
+  @Test
+  public void testBreadthFirst(){
+    Tree tree = new Tree();
+    // hard-coded tree
+
+    // root
+    tree.root = new Node(2);
+
+    // left side
+    tree.root.left = new Node(7);
+    tree.root.left.left = new Node(2);
+    tree.root.left.right = new Node(6);
+    tree.root.left.right.left = new Node(5);
+    tree.root.left.right.right = new Node(11);
+
+    // right side
+
+    tree.root.right = new Node(5);
+    tree.root.right.right = new Node(9);
+    tree.root.right.right.left = new Node(4);
+
+    tree.breadthFirst(tree.root);
+    ArrayList<Integer> expected= new ArrayList<>();
+    expected.add(2);
+    expected.add(7);
+    expected.add(5);
+    expected.add(2);
+    expected.add(6);
+    expected.add(9);
+    expected.add(5);
+    expected.add(11);
+    expected.add(4);
+    assertEquals("test breadth first tree", expected, tree.listOfBreadthFirst);
+
+  }
+  @Test
+  public void testBreadthFirstOneValue(){
+    Tree tree = new Tree();
+    // hard-coded tree
+
+    // root
+    tree.root = new Node(2);
+
+    tree.breadthFirst(tree.root);
+    ArrayList<Integer> expected= new ArrayList<>();
+    expected.add(2);
+    assertEquals("test breadth first tree", expected, tree.listOfBreadthFirst);
+
+  }
+
+  @Test
+  public void testBreadthFirstEmpty(){
+    Tree tree = new Tree();
+    // hard-coded tree
+
+
+    tree.breadthFirst(tree.root);
+    ArrayList<Integer> expected= new ArrayList<>();
+    assertEquals("test breadth first tree", expected, tree.listOfBreadthFirst);
+
+  }
 }

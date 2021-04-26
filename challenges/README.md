@@ -385,3 +385,35 @@ space complexity is **O(1)** because searching for the max value in tree does no
 <!-- Embedded whiteboard image -->
 
 <img src="./assets/find-maximum-binary-tree.png" width="600px">
+
+
+# Challenge_17 Summary
+<!-- Short summary or background information -->
+travesre a binary search tree using breadth first traversal and print out its node values
+
+
+## Challenge Description
+<!-- Description of the challenge -->
+for this challenge a [Queue](challenges/codes/app/src/main/tree/Queue.java) class used to hold the tree nodes.
+`breadthFirst(Node <value>)` method that traverse over the tree using breadth first traversal.
+
+to achive that a queue has been created and the tree node enqueued inside it.
+
+to visit all the nodes, looping until the queue peak is empty was the soloution
+
+each iteration the front is dequeued and check if it has left and right nodes
+
+if it has a left node then enqueue it in the queue
+
+if it has a right node then enqueue it as well.
+
+print the value or add it inside an array list each time the front is dequeued to show to the result.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+time complexity is **O(n)** because we are visting all the nodes in the tree
+space complecity is **O(n)** because of creating a queue that holds the tree nodes
+
+## Solution
+<!-- Embedded whiteboard image -->
+<img src="./assets/breadth-first.png" width="600px">
