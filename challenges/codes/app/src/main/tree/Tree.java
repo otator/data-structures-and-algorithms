@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class Tree {
-  Node root;
+  public Node root;
   public Tree(){
     root = null;
   }
@@ -45,6 +45,18 @@ public class Tree {
       postOrder(root.right);
 
     postOrderList.add(root.value);
+  }
+
+  public Integer max = Integer.MIN_VALUE;
+
+  public void findMaximumValue(Node root){
+    if(root == null)
+      return;
+    if(root.value > max)
+      max = root.value;
+
+    findMaximumValue(root.left);
+    findMaximumValue(root.right);
   }
 
 }

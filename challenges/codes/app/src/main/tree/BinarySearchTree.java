@@ -55,15 +55,15 @@ public class BinarySearchTree extends Tree{
     return true;
   }
 
-  public Integer findMaximumValue(Node root){
-    if(root == null)
-      return null;
-    Node temp = root;
-    while(temp.right != null){
-      temp = temp.right;
-    }
-    return temp.value;
-  }
+//  public Integer findMaximumValue(Node root){
+//    if(root == null)
+//      return null;
+//    Node temp = root;
+//    while(temp.right != null){
+//      temp = temp.right;
+//    }
+//    return temp.value;
+//  }
 
   private String result = "root ➔ ";
   public void getTree(Node root){
