@@ -10,6 +10,8 @@ import codes.app.src.main.stacksandqueues.PseudoQueue;
 import codes.app.src.main.stacksandqueues.Queue;
 import codes.app.src.main.stacksandqueues.Stack;
 import codes.app.src.main.tree.BinarySearchTree;
+import codes.app.src.main.tree.Node;
+import codes.app.src.main.tree.Tree;
 import codes.app.src.main.utilites.AnimalShelter;
 import codes.app.src.main.utilites.MultiBracketValidation;
 import org.junit.Test;
@@ -705,5 +707,49 @@ public class AppTest {
   public void testContainsEmpty(){
     BinarySearchTree tree = new BinarySearchTree();
     assertFalse("test that a value exists in empty tree", tree.contains(99, tree.root));
+  }
+
+  @Test
+  public void testMaximumValueTree(){
+    Tree tree = new Tree();
+    // hard-coded tree
+
+    // root
+    tree.root = new Node(2);
+
+    // left side
+    tree.root.left = new Node(7);
+    tree.root.left.left = new Node(2);
+    tree.root.left.right = new Node(6);
+    tree.root.left.right.left = new Node(5);
+    tree.root.left.right.right = new Node(11);
+
+    // right side
+
+    tree.root.right = new Node(5);
+    tree.root.right.right = new Node(9);
+    tree.root.right.right.left = new Node(4);
+    tree.findMaximumValue(tree.root);
+    Integer expected = 11;
+    assertEquals("tests the max value in tree which is 11", expected, tree.max);
+  }
+
+  @Test
+  public void testMaximumOneValueTree(){
+    Tree tree = new Tree();
+    // hard-coded tree
+
+    // root
+    tree.root = new Node(2);
+    tree.findMaximumValue(tree.root);
+    Integer expected = 2;
+    assertEquals("tests the max value in one-value tree which is 2", expected, tree.max);
+  }
+
+  @Test
+  public void testMaximumValueEmptyTree(){
+    Tree tree = new Tree();
+    Integer expected = Integer.MIN_VALUE;
+    assertEquals("tests the max value in empty tree, the max will be the minimum value of Integer", expected, tree.max);
   }
 }
