@@ -417,3 +417,37 @@ space complecity is **O(n)** because of creating a queue that holds the tree nod
 ## Solution
 <!-- Embedded whiteboard image -->
 <img src="./assets/breadth-first.png" width="600px">
+
+
+# Challenge_18 Summary
+<!-- Short summary or background information -->
+Fizz Buzz Tree is a tree that has the fizz value in each node that has a number is divisible by three
+
+and the value 5 for each number divisible by 5
+
+and if the number is divisible by both 3 and 5 the value fizzbuzz will be set.
+
+## Challenge Description
+<!-- Description of the challenge -->
+
+[FizzBuzzTree.java](challenges/codes/app/src/main/utilites/FizzBuzzTree.java) class has been created to create an instance tree of it
+
+to make the FizzBuzzTree instances have a string and numbers values a [TreeNode](challenges/codes/app/src/main/TreeNode.java) class with value of type Object has been created 
+
+`fizzBuzzTree(TreeNode <root>)` method that takes in a tree and traverse over it using pre order traversal and check each node's value:
+
+* if the value is divisible by 3 and 5 -> replace the value by "*FizzBuzz*"
+* if the value is divisible by 3 -> replace the value by "*Fizz*"
+* if the value is divisible by 5 -> replace the value by "*Buzz*"
+* if the value is NOT divisible by 3 or 5 -> convert the value to *string*
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+time complexity is **O(n)** because we are visiting all the nodes
+
+space complexity is **O(1)**, not extra space allocated
+
+## Solution
+<!-- Embedded whiteboard image -->
+<img src="./assets/fizzbuzz-tree.png" width="600px">
