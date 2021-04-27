@@ -3,6 +3,7 @@
  */
 package codes;
 
+import codes.app.src.main.TreeNode;
 import codes.app.src.main.java.codes.BinarySearch;
 import codes.app.src.main.java.codes.FullLinkedList;
 import codes.app.src.main.java.codes.LinkedList;
@@ -13,6 +14,7 @@ import codes.app.src.main.tree.BinarySearchTree;
 import codes.app.src.main.tree.Node;
 import codes.app.src.main.tree.Tree;
 import codes.app.src.main.utilites.AnimalShelter;
+import codes.app.src.main.utilites.FizzBuzzTree;
 import codes.app.src.main.utilites.MultiBracketValidation;
 import org.junit.Test;
 
@@ -813,5 +815,83 @@ public class AppTest {
     ArrayList<Integer> expected= new ArrayList<>();
     assertEquals("test breadth first tree", expected, tree.listOfBreadthFirst);
 
+  }
+
+  @Test
+  public void testEmptyFizzBuzzTree(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    assertNull("test empty fizz buzz tree", tree.root);
+  }
+
+  @Test
+  public void testFizzBuzzTreeRoot1(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    tree.root = new TreeNode(3);
+
+    // left side
+    tree.root.left = new TreeNode(5);
+    tree.root.left.left = new TreeNode(10);
+    tree.root.left.right = new TreeNode(15);
+    tree.root.left.right.left = new TreeNode(20);
+    tree.root.left.right.right = new  TreeNode(25);
+
+    // right side
+    tree.root.right = new TreeNode(30);
+    tree.root.right.right = new TreeNode(35);
+    tree.root.right.right.left = new TreeNode(79);
+    tree.fizzBuzzTree(tree.root);
+    assertEquals("test the root is equal to fizz", "Fizz", tree.root.value);
+  }
+
+  @Test
+  public void testFizzBuzzTreeRoot2(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    tree.root = new TreeNode(5);
+
+    tree.fizzBuzzTree(tree.root);
+    assertEquals("test the root is equal to buzz", "Buzz", tree.root.value);
+  }
+
+  @Test
+  public void testFizzBuzzTreeRoot3(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    tree.root = new TreeNode(30);
+
+    tree.fizzBuzzTree(tree.root);
+    assertEquals("test the root is equal to fizz buzz", "FizzBuzz", tree.root.value);
+  }
+  @Test
+  public void testFizzBuzzTreeRoot4(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    tree.root = new TreeNode(101);
+
+    tree.fizzBuzzTree(tree.root);
+    assertEquals("test the root is equal to '101' ", "101", tree.root.value);
+  }
+  @Test
+  public void testFizzBuzzTree(){}{
+    FizzBuzzTree tree = new FizzBuzzTree();
+    tree.fizzBuzzTree(tree.root);
+    tree.root = new TreeNode(3);
+
+    // left side
+    tree.root.left = new TreeNode(7);
+    tree.root.left.left = new TreeNode(4);
+    tree.root.left.right = new TreeNode(15);
+    tree.root.left.right.left = new TreeNode(21);
+    tree.root.left.right.right = new  TreeNode(25);
+
+    // right side
+    tree.root.right = new TreeNode(30);
+    tree.root.right.right = new TreeNode(0);
+    tree.root.right.right.left = new TreeNode(79);
+    tree.fizzBuzzTree(tree.root);
+    String expected = "root ➔ Fizz ➔ 7 ➔ 4 ➔ FizzBuzz ➔ Fizz ➔ Buzz ➔ FizzBuzz ➔ FizzBuzz ➔ 79 ➔  leaf";
+    assertEquals("test the all tree nodes", expected, tree.toString());
   }
 }
