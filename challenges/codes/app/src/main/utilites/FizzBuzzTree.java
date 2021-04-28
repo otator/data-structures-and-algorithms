@@ -44,8 +44,7 @@ public class FizzBuzzTree {
   @Override
   public String toString() {
     getTree(root);
-    result+= " leaf";
-    return result;
+    return result.substring(0, result.length()-3);
   }
 
 }
