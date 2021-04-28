@@ -45,16 +45,21 @@ public class Tree {
     postOrderList.add(root.value);
   }
 
-  public Integer max = Integer.MIN_VALUE;
+  private Integer max = Integer.MIN_VALUE;
 
-  public void findMaximumValue(Node root){
+  private void findMaxValue(Node root){
     if(root == null)
       return;
     if(root.value > max)
       max = root.value;
 
-    findMaximumValue(root.left);
-    findMaximumValue(root.right);
+    findMaxValue(root.left);
+    findMaxValue(root.right);
+  }
+
+  public Integer findMaximumValue(Node root){
+    findMaxValue(root);
+    return max;
   }
   public Queue queueOfBreadthFirst = new Queue();
   // for test only

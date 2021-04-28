@@ -615,7 +615,7 @@ public class AppTest {
     tree.add(0);
     tree.add(13);
     tree.add(18);
-    String output = "root ➔ 15 ➔ 12 ➔ 0 ➔ 13 ➔ 20 ➔ 18 ➔  leaf";
+    String output = "root ➔ 15 ➔ 12 ➔ 0 ➔ 13 ➔ 20 ➔ 18";
     assertEquals("test the root value, must return true", output, tree.toString());
   }
 
@@ -694,7 +694,7 @@ public class AppTest {
   }
 
   @Test
-  public void testContainsFasle(){
+  public void testContainsFalse(){
     BinarySearchTree tree = new BinarySearchTree();
     tree.add(15);
     tree.add(12);
@@ -731,9 +731,9 @@ public class AppTest {
     tree.root.right = new Node(5);
     tree.root.right.right = new Node(9);
     tree.root.right.right.left = new Node(4);
-    tree.findMaximumValue(tree.root);
+    Integer actual = tree.findMaximumValue(tree.root);
     Integer expected = 11;
-    assertEquals("tests the max value in tree which is 11", expected, tree.max);
+    assertEquals("tests the max value in tree which is 11", expected,actual);
   }
 
   @Test
@@ -743,16 +743,17 @@ public class AppTest {
 
     // root
     tree.root = new Node(2);
-    tree.findMaximumValue(tree.root);
+    Integer actual = tree.findMaximumValue(tree.root);
     Integer expected = 2;
-    assertEquals("tests the max value in one-value tree which is 2", expected, tree.max);
+    assertEquals("tests the max value in one-value tree which is 2", expected, actual);
   }
 
   @Test
   public void testMaximumValueEmptyTree(){
     Tree tree = new Tree();
     Integer expected = Integer.MIN_VALUE;
-    assertEquals("tests the max value in empty tree, the max will be the minimum value of Integer", expected, tree.max);
+    Integer actual = tree.findMaximumValue(tree.root);
+    assertEquals("tests the max value in empty tree, the max will be the minimum value of Integer", expected, actual);
   }
 
   @Test
@@ -891,7 +892,7 @@ public class AppTest {
     tree.root.right.right = new TreeNode(0);
     tree.root.right.right.left = new TreeNode(79);
     tree.fizzBuzzTree(tree.root);
-    String expected = "root ➔ Fizz ➔ 7 ➔ 4 ➔ FizzBuzz ➔ Fizz ➔ Buzz ➔ FizzBuzz ➔ FizzBuzz ➔ 79 ➔  leaf";
+    String expected = "root ➔ Fizz ➔ 7 ➔ 4 ➔ FizzBuzz ➔ Fizz ➔ Buzz ➔ FizzBuzz ➔ FizzBuzz ➔ 79";
     assertEquals("test the all tree nodes", expected, tree.toString());
   }
 }
