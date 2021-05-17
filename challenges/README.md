@@ -459,3 +459,13 @@ find the BLOG article about the challenge [here](BLOG.md)
 find the code implementation of the code challenge [here](codes/app/src/main/sort/InsertionSort.java)
 
 find the test of the code challenge [here](codes/app/src/main/sort/TestInsertion.java)
+
+
+
+# Challenge_27
+
+find the BLOG article about the challenge [here](blogs/merge-sort/BLOG.md)
+
+find the code implementation of the code challenge [here](codes/app/src/main/sort/MergeSort.java)
+
+find the test of the code challenge [here](codes/app/src/main/sort/TestMerge.java)
