@@ -55,6 +55,26 @@ public class BinarySearchTree extends Tree{
     return true;
   }
 
+  private Integer sum = 0;
+  private void sumOdd(Node root){
+    if(root == null)
+      return;
+
+    if(root.value % 2 == 1){
+      sum+= root.value;
+    }
+
+    sumOdd(root.left);
+    sumOdd(root.right);
+  }
+
+  public Integer sumOddNodes(Node root){
+    sumOdd(root);
+    return sum;
+  }
+
+
+
 //  public Integer findMaximumValue(Node root){
 //    if(root == null)
 //      return null;
