@@ -451,3 +451,11 @@ space complexity is **O(1)**, not extra space allocated
 ## Solution
 <!-- Embedded whiteboard image -->
 <img src="./assets/fizzbuzz-tree.png" width="600px">
+
+# Challenge_26
+
+find the BLOG article about the challenge [here](BLOG.md)
+
+find the code implementation of the code challenge [here](codes/app/src/main/sort/InsertionSort.java)
+
+find the test of the code challenge [here](codes/app/src/main/sort/TestInsertion.java)
