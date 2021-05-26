@@ -478,3 +478,72 @@ find the BLOG article about the challenge [here](blogs/quick-sort/BLOG.md)
 find the code implementation of the code challenge [here](codes/app/src/main/sort/QuickSort.java)
 
 find the test of the code challenge [here](codes/app/src/main/sort/TestQuick.java)
+
+
+
+# challenge_30
+<!-- Short summary or background information -->
+Implementing hash table, hash table is a data strcuture where key-value pairs can be stored and retrieved.
+
+## Challenge
+<!-- Description of the challenge -->
+implementing the hash table passed through the following:
+* create a [Node](codes/app/src/main/hashtable/LinkedList.java) class that has String value and pointer to the next node.
+* create [LinkedList.java](codes/app/src/main/hashtable/LinkedList.java) class, this classs needed to create the buckets for the hash table
+* create [HashTable.java](codes/app/src/main/hashtable/HashTable.java) class, and it has the following:
+  1. An array with an empty linked list at each index
+  2. `getHash(String <key>)` method that returns an index after hashing a key.
+  3. `add(String <key>, String <value>)` method that adds a key-value pair into the hash table.
+  4. `find(String <key>)` method that returns the value of the given key if exists.
+  5. `contains(String <key>)` method that checks whether a key exists in the hash table or not.
+  6. `toString()` method that returns a string represeting the hash table in a specific format.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+since adding and getting from an array has the time complexity of **O(1)**, the hash table has the same time complexity.
+
+hashing a key and convert it to index has time complexity **O(1)** 
+
+looping over a small linked list in case of collision has also **O(n)** as time complexity.
+
+
+## API (Hash Table)
+<!-- Description of each method publicly available in each of your hashtable -->
+
+* create an instance of a hash table.
+
+```java
+  int size = 10; //the size of the hash table array
+  HashTable hashTable = new HashTable(size);
+```
+
+* add key-value pair to the hash table.
+
+```java
+  hashTable.add("name", "AbdalQader");
+```
+
+* get the value of key if exists.
+
+```java
+  String name = hashTable.find("name"); // name = AbdalQader
+  String age = hashTable.find("age"); // age = null
+```
+
+* check whether a key exists or not.
+
+```java
+  boolean found = hashTable.contains("name"); // found = true;
+  boolean isFound = hashTable.contains("age"); // isFound = false;
+```
+
+* get the hash of a key.
+
+  ```java
+  int name = hashTable.getHash("name"); // name = 7 in case of array size is 10
+```
+
+
+
+

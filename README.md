@@ -18,7 +18,7 @@
 | BinarySearchTree.java | [challenge_15](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/BinarySearchTree.java) |
 | Tree.java | [challenge_15](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/Tree.java) |
 | FizzBuzzTree.java | [challenge_18](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/utilites/FizzBuzzTree.java) |
-
+| HashTable.java | [challenge_30](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/hashtable/HashTable.java) |
 
 
 
