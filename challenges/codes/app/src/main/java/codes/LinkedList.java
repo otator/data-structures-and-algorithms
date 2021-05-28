@@ -8,7 +8,7 @@ public class LinkedList {
     length = 0;
   }
 
-  static class Node{
+  public static class Node{
     int value;
     Node next;
     public Node(int v){
