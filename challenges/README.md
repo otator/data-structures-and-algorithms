@@ -586,7 +586,7 @@ total = **O(n)**
 
 find the code [here](codes/app/src/main/hashtable/RepeatedWord.java)
 
-find the tests [here](codes/AppTest.java)
+find the tests [here](codes/AppTest.java#L983)
 
 
 
