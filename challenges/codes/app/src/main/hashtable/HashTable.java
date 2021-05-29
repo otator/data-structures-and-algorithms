@@ -25,9 +25,9 @@ public class HashTable {
 
 
   public void add(String key, String value){
-    Node pair = new Node(key + ":" + value);
+    String pair = key + ":" + value;
     int index = getHash(key);
-    arr[index].append(pair);
+    arr[index].appendWithUpdate(pair);
   }
 
   public String find(String key){
@@ -54,6 +54,10 @@ public class HashTable {
       }
     }
     return false;
+  }
+
+  public int getSize() {
+    return size;
   }
 
   @Override

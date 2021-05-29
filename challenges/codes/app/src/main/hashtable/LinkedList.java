@@ -23,6 +23,24 @@ public class LinkedList {
     }
   }
 
+  public void appendWithUpdate(String value) {
+    if (isEmpty())
+      head = new Node(value);
+    else {
+      String key = value.split(":")[0];
+      Node current = head;
+      while (current.next!= null){
+        // check if current node has the same key
+        if(current.value.contains(key)){
+          current.value = value;
+          break;
+        }
+        current = current.next;
+      }
+      current.next = new Node(value);
+    }
+  }
+
 }
 
 class Node{
