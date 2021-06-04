@@ -1,6 +1,5 @@
 package codes.app.src.main.hashtable;
 
-import java.util.Arrays;
 
 public class HashTable {
   public LinkedList[] arr;

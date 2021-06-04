@@ -40,15 +40,4 @@ public class LinkedList {
       current.next = new Node(value);
     }
   }
-
-}
-
-class Node{
-  String value;
-  Node next;
-
-   public Node(String value){
-     this.value = value;
-     next = null;
-   }
 }
