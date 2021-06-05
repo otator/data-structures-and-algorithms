@@ -21,9 +21,9 @@
 | HashTable.java | [challenge_30](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/hashtable/HashTable.java) |
 | RepeatedWord.java | [challenge_31](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/hashtable/RepeatedWord.java) |
 | IntersectionNodes | [challenge_32](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/Tree.java#L87) |
-| LeftJoin.java | [challenge_33](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/hashtable/LeftKoin.java) |
+| LeftJoin.java | [challenge_33](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/leftjoin/LeftJoin.java) |
 | Graph.java | [challenge_35](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/graph/Graph.java) |
-| Graph.java | [challenge_35](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/breadthfirst/BreadthFirst.java) |
+| BreadthFirst.java | [challenge_36](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/breadthfirst/BreadthFirst.java) |
 
 
 
