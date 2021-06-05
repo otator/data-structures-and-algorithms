@@ -12,7 +12,7 @@ public class TestGraph {
   @Test
   public void testAddNode1(){
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
+    GraphNode<String> a = new GraphNode<>("a");
     graph.addNode(a.value);
     int expectedSize = 1; //size of graph
     assertEquals(expectedSize, graph.size());
@@ -21,8 +21,8 @@ public class TestGraph {
   @Test
   public void testAddEdge(){
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addEdge(a, b, 4, false);
@@ -32,10 +32,10 @@ public class TestGraph {
   @Test
   public void testGetAllNodes(){
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
+    GraphNode<String> c = new GraphNode<>("c");
+    GraphNode<String> d = new GraphNode<>("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
@@ -48,10 +48,10 @@ public class TestGraph {
   public void testGetAllNeighbors1(){
     Graph<String> graph = new Graph<>(10);
 
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
+    GraphNode<String> c = new GraphNode<>("c");
+    GraphNode<String> d = new GraphNode<>("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
@@ -70,10 +70,10 @@ public class TestGraph {
   public void testGetAllNeighbors2(){
     Graph<String> graph = new Graph<>(10);
 
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
+    GraphNode<String> c = new GraphNode<>("c");
+    GraphNode<String> d = new GraphNode<>("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
@@ -92,10 +92,10 @@ public class TestGraph {
   public void testGetAllNeighbors3(){
     Graph<String> graph = new Graph<>(10);
 
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
+    GraphNode<String> c = new GraphNode<>("c");
+    GraphNode<String> d = new GraphNode<>("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
@@ -113,10 +113,10 @@ public class TestGraph {
   @Test
   public void testGraphSize(){
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode<>("a");
+    GraphNode<String> b = new GraphNode<>("b");
+    GraphNode<String> c = new GraphNode<>("c");
+    GraphNode<String> d = new GraphNode<>("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
@@ -128,7 +128,7 @@ public class TestGraph {
   @Test
   public void testOneNodeAndOneEdge(){
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
+    GraphNode<String> a = new GraphNode<>("a");
     graph.addNode(a.value);
     graph.addEdge(a,a,1, true);
     String expected = "[a]: (a, 1) -> null";

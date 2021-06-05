@@ -18,8 +18,8 @@ public class Graph<T>{
       adjList[i] = new LinkedList<T>();
   }
 
-  public Node<T> addNode(T value) {
-    Node<T> node = new Node<>(value);
+  public GraphNode<T> addNode(T value) {
+    GraphNode<T> node = new GraphNode<>(value);
     if(index > size)
       return null;
     adjList[index].head = node;
@@ -27,7 +27,7 @@ public class Graph<T>{
     return node;
   }
 
-  public void addEdge(Node<T> node1, Node<T> node2, Integer weight, boolean isDirect){
+  public void addEdge(GraphNode<T> node1, GraphNode<T> node2, Integer weight, boolean isDirect){
     if(isDirect){
       addEdgeNode(node1, node1, weight);
     }else{
@@ -39,7 +39,7 @@ public class Graph<T>{
 
   public Set<T> getNodes(){
     Set<T> allNodes = new HashSet<>();
-    Node<T> current;
+    GraphNode<T> current;
     for(int i=0; i<index; i++){
       current = adjList[i].head;
       while(current!= null) {
@@ -50,9 +50,9 @@ public class Graph<T>{
     return allNodes;
   }
 
-  public ArrayList<Node <T>> getNodesList(){
-    ArrayList<Node<T>> nodes = new ArrayList<>();
-    Node<T> current;
+  public ArrayList<GraphNode <T>> getNodesList(){
+    ArrayList<GraphNode<T>> nodes = new ArrayList<>();
+    GraphNode<T> current;
     for(int i=0; i<index; i++){
       current = adjList[i].head;
       while (current!= null){
@@ -63,9 +63,9 @@ public class Graph<T>{
     return nodes;
   }
 
-  public Set<T> getNeighbors(Node<T> node){
+  public Set<T> getNeighbors(GraphNode<T> node){
     Set<T> neighbors = new HashSet<>();
-    Node<T> current;
+    GraphNode<T> current;
     for(int i=0; i<index; i++){
       if(adjList[i].head.equals(node)){
         current = adjList[i].head.next;
@@ -79,9 +79,9 @@ public class Graph<T>{
     return neighbors;
   }
 
-  public ArrayList<T> getNeighborsList(Node<T> node){
+  public ArrayList<T> getNeighborsList(GraphNode<T> node){
     ArrayList<T> list = new ArrayList<>();
-    Node<T> current;
+    GraphNode<T> current;
     for(int i=0; i<index; i++){
       if(adjList[i].head.equals(node)){
         current = adjList[i].head.next;
@@ -96,7 +96,7 @@ public class Graph<T>{
   }
 
 
-  private void addEdgeNode(Node<T> n1, Node<T> n2, Integer weight){
+  private void addEdgeNode(GraphNode<T> n1, GraphNode<T> n2, Integer weight){
     for(int i=0; i<index; i++){
       if(adjList[i].head.equals(n1)){
         adjList[i].add(n2.value, weight);
@@ -111,7 +111,7 @@ public class Graph<T>{
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
-    Node<T> current;
+    GraphNode<T> current;
     for(int i=0; i<index; i++){
       current = adjList[i].head.next;
       builder.append("[").append(adjList[i].head.value).append("]: ");

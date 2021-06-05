@@ -2,11 +2,11 @@ package codes.app.src.main.graph;
 
 import java.util.Objects;
 
-public class Node<T> {
+public class GraphNode<T> {
   public T value;
   public Integer weight;
-  public Node<T> next;
-  public Node(T value){
+  public GraphNode next;
+  public GraphNode(T value){
     this.value = value;
     next = null;
   }
@@ -19,7 +19,7 @@ public class Node<T> {
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Node<?> node = (Node<?>) o;
+    GraphNode node = (GraphNode) o;
     return Objects.equals(value, node.value) ;
   }
 

@@ -1,23 +1,23 @@
 package codes.app.src.main.breadthfirst;
 
 import codes.app.src.main.graph.Graph;
-import codes.app.src.main.graph.Node;
+import codes.app.src.main.graph.GraphNode;
 
 import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
     Graph<String> graph = new Graph(10);
-    Node<String> A = new Node<>("A");
-    Node<String> B = new Node<>("B");
-    Node<String> C = new Node<>("C");
-    Node<String> D = new Node<>("D");
-    Node<String> E = new Node<>("E");
-    Node<String> F = new Node<>("F");
-    Node<String> G = new Node<>("G");
-    Node<String> H = new Node<>("H");
-    Node<String> I = new Node<>("I");
-    Node<String> K = new Node<>("K");
+    GraphNode<String> A = new GraphNode<>("A");
+    GraphNode<String> B = new GraphNode<>("B");
+    GraphNode<String> C = new GraphNode<>("C");
+    GraphNode<String> D = new GraphNode<>("D");
+    GraphNode<String> E = new GraphNode<>("E");
+    GraphNode<String> F = new GraphNode<>("F");
+    GraphNode<String> G = new GraphNode<>("G");
+    GraphNode<String> H = new GraphNode<>("H");
+    GraphNode<String> I = new GraphNode<>("I");
+    GraphNode<String> K = new GraphNode<>("K");
 
     graph.addNode(A.value);
     graph.addNode(B.value);

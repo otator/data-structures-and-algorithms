@@ -1,12 +1,12 @@
 package codes.app.src.main.graph;
 
-public class Main {
+public class MainG {
   public static void main(String[] args) {
     Graph<String> graph = new Graph<>(10);
-    Node<String> a = new Node<>("a");
-    Node<String> b = new Node<>("b");
-    Node<String> c = new Node<>("c");
-    Node<String> d = new Node<>("d");
+    GraphNode<String> a = new GraphNode("a");
+    GraphNode<String> b = new GraphNode("b");
+    GraphNode<String> c = new GraphNode("c");
+    GraphNode<String> d = new GraphNode("d");
     graph.addNode(a.value);
     graph.addNode(b.value);
     graph.addNode(c.value);
