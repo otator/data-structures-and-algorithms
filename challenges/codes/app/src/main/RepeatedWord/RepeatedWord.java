@@ -1,6 +1,6 @@
-package codes.app.src.main.hashtable;
+package codes.app.src.main.RepeatedWord;
 
-import java.util.Locale;
+import codes.app.src.main.hashtable.HashTable;
 
 public class RepeatedWord {
   public static void main(String[] args) {

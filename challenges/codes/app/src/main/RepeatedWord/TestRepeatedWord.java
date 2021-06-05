@@ -1,4 +1,4 @@
-package codes.app.src.main.hashtable;
+package codes.app.src.main.RepeatedWord;
 
 import org.junit.Test;
 
