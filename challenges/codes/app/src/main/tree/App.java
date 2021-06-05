@@ -1,9 +1,7 @@
 package codes.app.src.main.tree;
 
 
-import codes.app.src.main.utilites.FizzBuzzTree;
-
-import java.util.ArrayList;
+import codes.app.src.main.TreeIntersection.TreeIntersection;
 
 public class App {
   public static void main(String[] args){
@@ -50,8 +48,8 @@ public class App {
 
     System.out.println(tree1);
     System.out.println(tree2);
-    Tree.intersect(tree1.root, tree2.root);
-    System.out.println(Tree.intersectionResult);
+    TreeIntersection.intersect(tree1.root, tree2.root);
+    System.out.println(TreeIntersection.intersectionResult);
 
   }
 
