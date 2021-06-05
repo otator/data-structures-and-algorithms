@@ -1,6 +1,7 @@
 package codes.app.src.main.graph;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -49,6 +50,19 @@ public class Graph<T>{
     return allNodes;
   }
 
+  public ArrayList<Node <T>> getNodesList(){
+    ArrayList<Node<T>> nodes = new ArrayList<>();
+    Node<T> current;
+    for(int i=0; i<index; i++){
+      current = adjList[i].head;
+      while (current!= null){
+        nodes.add(current);
+        current = current.next;
+      }
+    }
+    return nodes;
+  }
+
   public Set<T> getNeighbors(Node<T> node){
     Set<T> neighbors = new HashSet<>();
     Node<T> current;
@@ -63,6 +77,22 @@ public class Graph<T>{
       }
     }
     return neighbors;
+  }
+
+  public ArrayList<T> getNeighborsList(Node<T> node){
+    ArrayList<T> list = new ArrayList<>();
+    Node<T> current;
+    for(int i=0; i<index; i++){
+      if(adjList[i].head.equals(node)){
+        current = adjList[i].head.next;
+        while (current != null){
+          list.add(current.value);
+          current = current.next;
+        }
+        break;
+      }
+    }
+    return list;
   }
 
 

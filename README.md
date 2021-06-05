@@ -23,6 +23,7 @@
 | IntersectionNodes | [challenge_32](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/tree/Tree.java#L87) |
 | LeftJoin.java | [challenge_33](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/hashtable/LeftKoin.java) |
 | Graph.java | [challenge_35](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/graph/Graph.java) |
+| Graph.java | [challenge_35](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/breadthfirst/BreadthFirst.java) |
 
 
 
