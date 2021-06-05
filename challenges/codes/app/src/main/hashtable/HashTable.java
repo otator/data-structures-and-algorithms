@@ -2,14 +2,14 @@ package codes.app.src.main.hashtable;
 
 
 public class HashTable {
-  public LinkedList[] arr;
+  public HashLinkedList[] arr;
   private int size;
 
   public HashTable(int size){
     this.size = size;
-    arr = new LinkedList[size];
+    arr = new HashLinkedList[size];
     for(int i=0; i<size; i++){
-      arr[i] = new LinkedList();
+      arr[i] = new HashLinkedList();
     }
   }
 
@@ -32,7 +32,7 @@ public class HashTable {
   public String find(String key){
     int index = getHash(key);
     if(!arr[index].isEmpty()){
-      Node current = arr[index].head;
+      HashNode current = arr[index].head;
       while(current != null){
         if(current.value.contains(key))
           return current.value.split(":")[1];
@@ -45,7 +45,7 @@ public class HashTable {
   public boolean contains(String key){
     int index = getHash(key);
     if(!arr[index].isEmpty()){
-      Node current = arr[index].head;
+      HashNode current = arr[index].head;
       while (current != null){
         if(current.value.contains(key))
           return true;
@@ -62,7 +62,7 @@ public class HashTable {
   @Override
   public String toString() {
     StringBuilder result = new StringBuilder();
-    Node current;
+    HashNode current;
     for(int i=0; i<arr.length; i++){
       result.append("Bucket ").append(i).append(": ").append("[");
       current = arr[i].head;

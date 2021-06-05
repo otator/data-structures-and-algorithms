@@ -1,7 +1,7 @@
 package codes.app.src.main.java.codes;
 
 import java.util.Locale;
-import codes.app.src.main.java.codes.LinkedList.Node;
+import codes.app.src.main.java.codes.FirstLinkedList.Node;
 
 public class App {
   public static void main(String[] args){

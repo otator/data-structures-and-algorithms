@@ -1,6 +1,5 @@
 package codes.app.src.main.tree;
 
-import codes.app.src.main.java.codes.BinarySearch;
 
 public class BinarySearchTree extends Tree{
   public Node root;

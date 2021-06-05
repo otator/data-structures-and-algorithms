@@ -1,6 +1,6 @@
 package codes.app.src.main.java.codes;
 
-public class FullLinkedList extends LinkedList {
+public class FullLinkedList extends FirstLinkedList {
   public FullLinkedList(){
     super();
   }
@@ -132,7 +132,7 @@ public class FullLinkedList extends LinkedList {
     return lenght;
   }
 
-  public static LinkedList zipLists(LinkedList one, LinkedList two){
+  public static FirstLinkedList zipLists(FirstLinkedList one, FirstLinkedList two){
       if(one.head == null && two.head == null)
         return null;
       else if(one.head == null)
