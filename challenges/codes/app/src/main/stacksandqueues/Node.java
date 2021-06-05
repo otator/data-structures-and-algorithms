@@ -1,9 +1,9 @@
 package codes.app.src.main.stacksandqueues;
 
 public class Node {
-  int value;
-  Node next;
-  Node previous;
+  public int value;
+  public Node next;
+  public Node previous;
   public Node(int value){
     this.value = value;
     next = null;
