@@ -1,24 +1,25 @@
 package codes.app.src.main.breadthfirst;
 
-import codes.app.src.main.breadthfirst.BreadthFirst;
 import codes.app.src.main.graph.Graph;
-import codes.app.src.main.graph.Node;
+import codes.app.src.main.graph.GraphNode;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class TestBreadthFirst {
 
   @Test
   public void testBreadthFirst1(){
     Graph<String> graph = new Graph<>(6);
-    Node<String> pandora = new Node<>("Pandora");
-    Node<String> narnia = new Node<>("Narnia");
-    Node<String> metroville = new Node<>("Metroville");
-    Node<String> arendelle = new Node<>("Arendelle");
-    Node<String> manstropolis = new Node<>("Manstropolis");
-    Node<String> naboo = new Node<>("Naboo");
+    GraphNode<String> pandora = new GraphNode<>("Pandora");
+    GraphNode<String> narnia = new GraphNode<>("Narnia");
+    GraphNode<String> metroville = new GraphNode<>("Metroville");
+    GraphNode<String> arendelle = new GraphNode<>("Arendelle");
+    GraphNode<String> manstropolis = new GraphNode<>("Manstropolis");
+    GraphNode<String> naboo = new GraphNode<>("Naboo");
 
     graph.addNode(pandora.value);
     graph.addNode(metroville.value);
@@ -46,16 +47,16 @@ public class TestBreadthFirst {
   @Test
   public void testBreadthFirst2() {
     Graph<String> graph = new Graph(10);
-    Node<String> A = new Node<>("A");
-    Node<String> B = new Node<>("B");
-    Node<String> C = new Node<>("C");
-    Node<String> D = new Node<>("D");
-    Node<String> E = new Node<>("E");
-    Node<String> F = new Node<>("F");
-    Node<String> G = new Node<>("G");
-    Node<String> H = new Node<>("H");
-    Node<String> I = new Node<>("I");
-    Node<String> K = new Node<>("K");
+    GraphNode<String> A = new GraphNode<>("A");
+    GraphNode<String> B = new GraphNode<>("B");
+    GraphNode<String> C = new GraphNode<>("C");
+    GraphNode<String> D = new GraphNode<>("D");
+    GraphNode<String> E = new GraphNode<>("E");
+    GraphNode<String> F = new GraphNode<>("F");
+    GraphNode<String> G = new GraphNode<>("G");
+    GraphNode<String> H = new GraphNode<>("H");
+    GraphNode<String> I = new GraphNode<>("I");
+    GraphNode<String> K = new GraphNode<>("K");
 
     graph.addNode(A.value);
     graph.addNode(B.value);
@@ -104,7 +105,7 @@ public class TestBreadthFirst {
   public void testEmptyGraph(){
     Graph<String> graph = new Graph<>(10);
     // NOTE: this node just created and never added to the graph
-    Node<String> A = new Node<>("A");
+    GraphNode<String> A = new GraphNode<>("A");
     BreadthFirst<String> breadthFirst = new BreadthFirst<>();
     ArrayList<String> breadthList = breadthFirst.breadthFirst(graph, A);
     assertNull(breadthList);
@@ -114,7 +115,7 @@ public class TestBreadthFirst {
   public void testOneNodeGraph(){
     Graph<String> graph = new Graph<>(10);
 
-    Node<String> A = new Node<>("A");
+    GraphNode<String> A = new GraphNode<>("A");
     graph.addNode(A.value);
     BreadthFirst<String> breadthFirst = new BreadthFirst<>();
     ArrayList<String> breadthList = breadthFirst.breadthFirst(graph, A);
@@ -126,9 +127,9 @@ public class TestBreadthFirst {
   public void testTwoNodesGraph(){
     Graph<String> graph = new Graph<>(10);
 
-    Node<String> A = new Node<>("A");
+    GraphNode<String> A = new GraphNode<>("A");
     graph.addNode(A.value);
-    Node<String> B = new Node<>("B");
+    GraphNode<String> B = new GraphNode<>("B");
     graph.addNode(B.value);
     graph.addEdge(A, B, 0, false);
     BreadthFirst<String> breadthFirst = new BreadthFirst<>();
@@ -140,16 +141,16 @@ public class TestBreadthFirst {
   @Test
   public void testDisconnectedGraph() {
     Graph<String> graph = new Graph(10);
-    Node<String> A = new Node<>("A");
-    Node<String> B = new Node<>("B");
-    Node<String> C = new Node<>("C");
-    Node<String> D = new Node<>("D");
-    Node<String> E = new Node<>("E");
-    Node<String> F = new Node<>("F");
-    Node<String> G = new Node<>("G");
-    Node<String> H = new Node<>("H");
-    Node<String> I = new Node<>("I");
-    Node<String> K = new Node<>("K");
+    GraphNode<String> A = new GraphNode<>("A");
+    GraphNode<String> B = new GraphNode<>("B");
+    GraphNode<String> C = new GraphNode<>("C");
+    GraphNode<String> D = new GraphNode<>("D");
+    GraphNode<String> E = new GraphNode<>("E");
+    GraphNode<String> F = new GraphNode<>("F");
+    GraphNode<String> G = new GraphNode<>("G");
+    GraphNode<String> H = new GraphNode<>("H");
+    GraphNode<String> I = new GraphNode<>("I");
+    GraphNode<String> K = new GraphNode<>("K");
 
     graph.addNode(A.value);
     graph.addNode(B.value);

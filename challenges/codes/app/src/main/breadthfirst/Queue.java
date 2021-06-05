@@ -1,19 +1,19 @@
 package codes.app.src.main.breadthfirst;
 
-import codes.app.src.main.graph.Node;
+import codes.app.src.main.graph.GraphNode;
 
 public class Queue<T>{
-  private Node<T> front;
+  private GraphNode<T> front;
 
   public Queue(){
     front = null;
   }
 
-  public void enqueue(Node<T> value){
+  public void enqueue(GraphNode<T> value){
     if(front == null){
       front = value;
     }else{
-      Node<T> current = front;
+      GraphNode<T> current = front;
       while (current.next != null){
         current = current.next;
       }
@@ -21,14 +21,14 @@ public class Queue<T>{
     }
   }
 
-  public Node<T> dequeue(){
-    Node<T> temp = front;
+  public GraphNode<T> dequeue(){
+    GraphNode<T> temp = front;
     if(front != null)
       front = front.next;
     return temp;
   }
 
-  public Node<T> peek(){
+  public GraphNode<T> peek(){
     return front;
   }
 

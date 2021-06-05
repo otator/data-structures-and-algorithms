@@ -1,16 +1,16 @@
 package codes.app.src.main.graph;
 
 public class LinkedList<T>{
-  public Node<T> head;
+  public GraphNode<T> head;
 
   public LinkedList(){
     head = null;
   }
 
   public void add(T value, Integer weight){
-    Node<T> val = new Node<>(value);
+    GraphNode<T> val = new GraphNode<>(value);
     val.setWeight(weight);
-    Node<T> current = head;
+    GraphNode<T> current = head;
     if(head == null){
       head = val;
     }else {
@@ -24,7 +24,7 @@ public class LinkedList<T>{
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
-    Node<T> current = head;
+    GraphNode<T> current = head;
     while(current != null){
       builder.append("(").append(current.value).append(", ").append(current.weight).append(") -> ");
       current = current.next;
