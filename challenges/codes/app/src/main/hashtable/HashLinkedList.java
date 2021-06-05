@@ -1,9 +1,9 @@
 package codes.app.src.main.hashtable;
 
-public class LinkedList {
-  public Node head;
+public class HashLinkedList {
+  public HashNode head;
 
-  public LinkedList(){
+  public HashLinkedList(){
     head = null;
   }
 
@@ -11,11 +11,11 @@ public class LinkedList {
     return head == null;
   }
 
-  public void append(Node value){
+  public void append(HashNode value){
     if(isEmpty())
       head = value;
     else{
-      Node current = head;
+      HashNode current = head;
       while(current.next != null){
         current = current.next;
       }
@@ -25,10 +25,10 @@ public class LinkedList {
 
   public void appendWithUpdate(String value) {
     if (isEmpty())
-      head = new Node(value);
+      head = new HashNode(value);
     else {
       String key = value.split(":")[0];
-      Node current = head;
+      HashNode current = head;
       while (current.next!= null){
         // check if current node has the same key
         if(current.value.contains(key)){
@@ -37,7 +37,7 @@ public class LinkedList {
         }
         current = current.next;
       }
-      current.next = new Node(value);
+      current.next = new HashNode(value);
     }
   }
 }

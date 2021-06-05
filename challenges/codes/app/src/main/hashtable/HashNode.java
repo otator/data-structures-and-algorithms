@@ -1,10 +1,10 @@
 package codes.app.src.main.hashtable;
 
-public class Node{
+public class HashNode {
   public String value;
-  public Node next;
+  public HashNode next;
 
-  public Node(String value){
+  public HashNode(String value){
     this.value = value;
     next = null;
   }

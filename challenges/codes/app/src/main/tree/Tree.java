@@ -1,6 +1,5 @@
 package codes.app.src.main.tree;
 
-import codes.app.src.main.TreeNode;
 
 import java.util.ArrayList;
 public class Tree {

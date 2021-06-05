@@ -1,4 +1,8 @@
-package codes.app.src.main.hashtable;
+package codes.app.src.main.leftjoin;
+
+import codes.app.src.main.hashtable.HashLinkedList;
+import codes.app.src.main.hashtable.HashNode;
+import codes.app.src.main.hashtable.HashTable;
 
 public class LeftJoin {
   public static void main(String[] args) {
@@ -27,8 +31,9 @@ public class LeftJoin {
     return hashTable;
   }
 
-  public static void addEquals(LinkedList list1, LinkedList list2, HashTable hashTable){
-    Node current1 = list1.head;Node current2 = list2.head;
+  public static void addEquals(HashLinkedList list1, HashLinkedList list2, HashTable hashTable){
+    HashNode current1 = list1.head;
+    HashNode current2 = list2.head;
     String key1="";String key2="";String value1="";String value2="";
     while(current1 != null){
       key1 = current1.value.split(":")[0];
@@ -50,7 +55,7 @@ public class LeftJoin {
 
   public static String hashTableBuckets(HashTable hashTable){
     StringBuilder result = new StringBuilder();
-    Node current;
+    HashNode current;
     for(int i=0; i<hashTable.arr.length; i++){
       current = hashTable.arr[i].head;
       while(current != null){

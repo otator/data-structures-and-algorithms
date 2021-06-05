@@ -1,9 +1,5 @@
 package codes.app.src.main.utilites;
 
-import codes.app.src.main.TreeNode;
-
-import java.util.ArrayList;
-
 public class FizzBuzzTree {
   public TreeNode root;
   public FizzBuzzTree(){

@@ -1,9 +1,9 @@
 package codes.app.src.main.java.codes;
 
-public class LinkedList {
+public class FirstLinkedList {
   Node head;
   int length;
-  public LinkedList(){
+  public FirstLinkedList(){
     head = null;
     length = 0;
   }

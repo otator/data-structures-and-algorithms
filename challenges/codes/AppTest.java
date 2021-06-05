@@ -3,22 +3,12 @@
  */
 package codes;
 
-import codes.app.src.main.TreeNode;
-import codes.app.src.main.hashtable.HashTable;
-import codes.app.src.main.hashtable.LeftJoin;
-import codes.app.src.main.hashtable.RepeatedWord;
-import codes.app.src.main.java.codes.BinarySearch;
+import codes.app.src.main.java.codes.FirstLinkedList;
 import codes.app.src.main.java.codes.FullLinkedList;
-import codes.app.src.main.java.codes.LinkedList;
-import codes.app.src.main.stacksandqueues.PseudoQueue;
-import codes.app.src.main.stacksandqueues.Queue;
-import codes.app.src.main.stacksandqueues.Stack;
-import codes.app.src.main.tree.BinarySearchTree;
 import codes.app.src.main.tree.Node;
 import codes.app.src.main.tree.Tree;
-import codes.app.src.main.utilites.AnimalShelter;
 import codes.app.src.main.utilites.FizzBuzzTree;
-import codes.app.src.main.utilites.MultiBracketValidation;
+import codes.app.src.main.utilites.TreeNode;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -28,13 +18,13 @@ import static org.junit.Assert.*;
 public class AppTest {
    @Test
   public void testInsert(){
-     LinkedList list = new LinkedList();
+     FirstLinkedList list = new FirstLinkedList();
      list.insert(5);
      assertTrue("test insert into linked list", list.includes(5));
    }
    @Test
   public void testIncludes(){
-     LinkedList list = new LinkedList();
+     FirstLinkedList list = new FirstLinkedList();
      list.insert(5);
      list.insert(4);
      list.insert(99);
@@ -43,7 +33,7 @@ public class AppTest {
 
    @Test
   public void testNotIncludes(){
-     LinkedList list = new LinkedList();
+     FirstLinkedList list = new FirstLinkedList();
      list.insert(5);
      list.insert(4);
      assertFalse(list.includes(99));
@@ -51,72 +41,14 @@ public class AppTest {
 
    @Test
   public void testListValues(){
-     LinkedList list = new LinkedList();
+     FirstLinkedList list = new FirstLinkedList();
      list.insert(5);
      list.insert(4);
      assertEquals("test the values of the list", "{4} -> {5} -> NULL", list.toString());
    }
 
 
-   @Test
-  public void testArray(){
-     int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
-     int expectedIndex = 11;
-     int value = 37;
-     int actualIndex = BinarySearch.binarySearch(arr, value);
-     assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
-   }
-  @Test
-  public void testLastIndexOfArray(){
-    int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
-    int expectedIndex = 16;
-    int value = 59;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
-  }
-  @Test
-  public void testFirstIndexOfArray(){
-    int [] arr = {1,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
-    int expectedIndex = 0;
-    int value = 1;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test the value index of array with more than 10 values", expectedIndex, actualIndex);
-  }
-
-  @Test
-  public void testIndexOfOneArrayValue(){
-    int [] arr = {5};
-    int expectedIndex = 0;
-    int value = 5;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test array with one value", expectedIndex, actualIndex);
-  }
-
-  @Test
-  public void testIndexOfTwoArrayValues(){
-    int [] arr = {11,99};
-    int expectedIndex = 1;
-    int value = 99;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test array with two values", expectedIndex, actualIndex);
-  }
-
-  @Test
-  public void testEmpty(){
-    int [] arr = {};
-    int expectedIndex = -1;
-    int value = 10;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test empty array must return -1", expectedIndex, actualIndex);
-  }
-  @Test
-  public void testNotExists(){
-    int [] arr = {2,4,6,8,10};
-    int expectedIndex = -1;
-    int value = 9;
-    int actualIndex = BinarySearch.binarySearch(arr, value);
-    assertEquals("test empty array must return -1", expectedIndex, actualIndex);
-  }
+   
 
   @Test
   public void testOneAtTheEnd(){
@@ -273,7 +205,7 @@ public class AppTest {
     list2.append(9);
     list2.append(4);
     String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> NULL";
-    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    FirstLinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertEquals("test two equals linked lists", expected, zip.toString());
   }
 
@@ -290,7 +222,7 @@ public class AppTest {
     list2.append(4);
     list2.append(100);
     String expected = "{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> {100} -> NULL";
-    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    FirstLinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertEquals("test two different linked lists in length", expected, zip.toString());
   }
 
@@ -305,7 +237,7 @@ public class AppTest {
     list2.append(100);
     String expected = "{5} -> {9} -> {4} -> {100} -> NULL";
 
-    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    FirstLinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertEquals("test one empty linked lists",expected,zip.toString());
   }
   @Test
@@ -318,7 +250,7 @@ public class AppTest {
     FullLinkedList list2 = new FullLinkedList();
 
     String expected = "{1} -> {3} -> {2} -> NULL";
-    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    FirstLinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertEquals("test one empty linked lists",expected,zip.toString());
   }
 
@@ -327,392 +259,13 @@ public class AppTest {
     FullLinkedList list1 = new FullLinkedList();
     FullLinkedList list2 = new FullLinkedList();
 
-    LinkedList zip = FullLinkedList.zipLists(list1, list2);
+    FirstLinkedList zip = FullLinkedList.zipLists(list1, list2);
     assertNull("test two empty linked lists",zip);
   }
 
-  @Test
-  public void testPushOneIntoStack() {
-    Stack stack = new Stack();
-    Integer actual = 5;
-    stack.push(5);
-    assertEquals("test pushing one value into stack", actual, stack.pop());
-  }
-
-  @Test
-  public void testPushManyIntoStack() {
-    Stack stack = new Stack();
-    Integer actual = -7;
-    stack.push(5);
-    stack.push(4);
-    stack.push(-7);
-    assertEquals("test pushing one value into stack", actual, stack.peek());
-  }
-
-  @Test
-  public void testPopToEmptyStack() {
-    Stack stack = new Stack();
-    stack.push(5);
-    stack.push(4);
-    stack.push(-7);
-    stack.pop();
-    stack.pop();
-    stack.pop();
-    assertNull(stack.peek());
-  }
-
-  @Test
-  public void testPopEmptyStack() {
-    Stack stack = new Stack();
-    assertNull(stack.pop());
-  }
-
-  @Test
-  public void testOneEnqueue() {
-    Queue queue = new Queue();
-    Integer actual = 12;
-    queue.enqueue(12);
-    assertEquals("test enqueuing one value into queue", actual, queue.dequeue());
-  }
-
-  @Test
-  public void testManyEnqueue() {
-    Queue queue = new Queue();
-    Integer actual = 100;
-    queue.enqueue(100);
-    queue.enqueue(1);
-    queue.enqueue(2);
-    queue.enqueue(3);
-    assertEquals("test enqueuing one value into queue", actual, queue.peek());
-  }
-
-  @Test
-  public void testEmptyQueue() {
-    Queue queue = new Queue();
-    queue.enqueue(96);
-    queue.enqueue(2020);
-    queue.enqueue(2021);
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();
-    assertNull(queue.peek());
-  }
-
-  @Test
-  public void testEmptyQueue2() {
-    Queue queue = new Queue();
-    assertNull(queue.dequeue());
-  }
-
-  //test of PseudoQueue class (queue with stacks)
-
-  @Test
-  public void testEnqueue(){
-    PseudoQueue queue = new PseudoQueue();
-    queue.enqueue(10);
-    queue.enqueue(15);
-    queue.enqueue(20);
-    String expected = "front -> {10} -> {15} -> {20} -> rare";
-    assertEquals("test enqueue method", expected, queue.toString());
-  }
-
-  @Test
-  public void testDequeue(){
-    PseudoQueue queue = new PseudoQueue();
-    queue.enqueue(10);
-    queue.enqueue(15);
-    queue.enqueue(20);
-    Integer expected = 10;
-    assertEquals("test dequeue method", expected, queue.dequeue());
-  }
-
-  @Test
-  public void testMultiDequeue(){
-    PseudoQueue queue = new PseudoQueue();
-    queue.enqueue(10);
-    queue.enqueue(15);
-    queue.enqueue(20);
-    queue.dequeue();
-    queue.dequeue();
-    String expected = "front -> {20} -> rare";
-    assertEquals("test multi dequeue method", expected, queue.toString());
-  }
-
-  @Test
-  public void testDequeueUntilEmpty(){
-    PseudoQueue queue = new PseudoQueue();
-    queue.enqueue(10);
-    queue.enqueue(15);
-    queue.enqueue(20);
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();
-    assertNull(queue.dequeue());
-  }
-
-  //test  AnimalShelter class
-
-  @Test
-  public void testEmptyShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    assertNull(shelter.dequeue("cat"));
-  }
-
-  @Test
-  public void testOneAnimalShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    shelter.enqueue("cat");
-    String expected = "cat";
-    assertEquals("test dequeue from shelter with one animal", expected, shelter.dequeue("cat"));
-  }
-
-  @Test
-  public void testNotFoundAnimalInShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    shelter.enqueue("cat");
-    shelter.enqueue("cat");
-    shelter.enqueue("cat");
-    shelter.enqueue("cat");
-    assertNull(shelter.dequeue("dog"));
-  }
-
-  @Test
-  public void testAddAnimalsInShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    shelter.enqueue("cat");
-    shelter.enqueue("dog");
-    shelter.enqueue("dog");
-    shelter.enqueue("cat");
-    shelter.enqueue("dog");
-    shelter.enqueue("cat");
-    shelter.enqueue("dog");
-    shelter.enqueue("dog");
-    shelter.enqueue("dog");
-    shelter.enqueue("dog");
-    String expected ="front ➔ {cat} ➔ {dog} ➔ {dog} ➔ {cat} ➔ {dog} ➔ {cat} ➔ {dog} ➔ {dog} ➔ {dog} ➔ {dog} ➔ rear";
-    assertEquals("tests add many cats and dogs into the shelter",expected, shelter.toString());
-  }
-
-  @Test
-  public void testAddDifferentAnimalsInShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    shelter.enqueue("dog");
-    shelter.enqueue("cow");
-    shelter.enqueue("mouse");
-    shelter.enqueue("cat");
-    shelter.enqueue("donkey");
-    shelter.enqueue("giraffe");
-    shelter.enqueue("cat");
-    String expected ="front ➔ {dog} ➔ {cat} ➔ {cat} ➔ rear";
-    assertEquals("tests add different animals rather that cats and dogs into the shelter",expected, shelter.toString());
-  }
-
-  @Test
-  public void testGetDifferentAnimalsFromShelter(){
-    AnimalShelter shelter = new AnimalShelter();
-    shelter.enqueue("dog");
-    shelter.enqueue("cat");
-    shelter.enqueue("cat");
-    assertNull(shelter.dequeue("monkey"));
-  }
-
-  @Test
-  public void testMultiBracketValidationEmptyCode(){
-    String code = "";
-    assertTrue("must return true for empty code", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationOne1(){
-    String code = "(";
-    assertFalse("must return false for one open bracket", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationOne2(){
-    String code = "}";
-    assertFalse("must return false for one close bracket", MultiBracketValidation.multiBracketValidation(code));
-  }
 
 
-  @Test
-  public void testMultiBracketValidationCode1(){
-    String code = "{}";
-    assertTrue("must return true for balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
 
-  @Test
-  public void testMultiBracketValidationCode2(){
-    String code = "{}(){}";
-    assertTrue("must return true for balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode3(){
-    String code = "()[[Extra Characters]]";
-    assertTrue("must return true for balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode4(){
-    String code = "(){}[[]]";
-    assertTrue("must return true for balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode5(){
-    String code = "{}{Code}[Fellows](())";
-    assertTrue("must return true for balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode6(){
-    String code = "[({}]";
-    assertFalse("must return false for NOT balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode7(){
-    String code = "(](";
-    assertFalse("must return false for NOT  balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode8(){
-    String code = "{{(})}";
-    assertFalse("must return false for NOT balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testMultiBracketValidationCode9(){
-    String code = "[]][][][][][][[[][][][][][][][]]]]";
-    assertFalse("must return false for NOT balanced brackets", MultiBracketValidation.multiBracketValidation(code));
-  }
-
-  @Test
-  public void testEmptyTree(){
-    BinarySearchTree tree = new BinarySearchTree();
-    assertTrue("tests that the tree is empty before adding any nodes",tree.isEmpty());
-  }
-
-  @Test
-  public void testTreeNullRoot(){
-    BinarySearchTree tree = new BinarySearchTree();
-    assertNull("test that the root is null before adding any new node",tree.root);
-  }
-
-  @Test
-  public void testTreeRoot(){
-    BinarySearchTree tree = new BinarySearchTree();
-    Integer value = 15;
-    tree.add(value);
-    assertEquals("test the root value, must return true", value, tree.root.value);
-  }
-
-  @Test
-  public void testAddManyNodes(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-    String output = "root ➔ 15 ➔ 12 ➔ 0 ➔ 13 ➔ 20 ➔ 18";
-    assertEquals("test the root value, must return true", output, tree.toString());
-  }
-
-  @Test
-  public void testPreOrderTraversal(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-    ArrayList<Integer> list = new ArrayList<>();
-    list.add(15);
-    list.add(12);
-    list.add(0);
-    list.add(13);
-    list.add(20);
-    list.add(18);
-    tree.preOrder(tree.root);
-    assertEquals("tests pre-order traversal", list, tree.preOrderList);
-  }
-
-  @Test
-  public void testInOrderTraversal(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-
-    ArrayList<Integer> list = new ArrayList<>();
-    list.add(0);
-    list.add(12);
-    list.add(13);
-    list.add(15);
-    list.add(18);
-    list.add(20);
-    tree.inOrder(tree.root);
-    assertEquals("tests in-order traversal", list, tree.inOrderList);
-  }
-
-  @Test
-  public void testPostOrderTraversal(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-
-    ArrayList<Integer> list = new ArrayList<>();
-    list.add(0);
-    list.add(13);
-    list.add(12);
-    list.add(18);
-    list.add(20);
-    list.add(15);
-    tree.postOrder(tree.root);
-    assertEquals("tests post-order traversal", list, tree.postOrderList);
-  }
-
-  @Test
-  public void testContainsTrue(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-    assertTrue("test that a value exists in tree", tree.contains(20, tree.root));
-  }
-
-  @Test
-  public void testContainsFalse(){
-    BinarySearchTree tree = new BinarySearchTree();
-    tree.add(15);
-    tree.add(12);
-    tree.add(20);
-    tree.add(0);
-    tree.add(13);
-    tree.add(18);
-    assertFalse("test that a value NOT  exists in tree", tree.contains(99, tree.root));
-  }
-
-  @Test
-  public void testContainsEmpty(){
-    BinarySearchTree tree = new BinarySearchTree();
-    assertFalse("test that a value exists in empty tree", tree.contains(99, tree.root));
-  }
 
   @Test
   public void testMaximumValueTree(){
@@ -900,135 +453,7 @@ public class AppTest {
   }
 
 
-  //-------------------------------- test hash table ------------------------------------------//
 
-  @Test
-  public void testFindOfExists(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    String expected = "AbdalQader";
-    String actual = hashTable.find("name");
-    assertEquals("tests find method", expected, actual);
-  }
-
-  @Test
-  public void testFindOfNotExists(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    String actual = hashTable.find("name2");
-    assertNull("tests find method", actual);
-  }
-
-  @Test
-  public void testFindOfExistsWithCollision(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    hashTable.add("mean", "Mhemed");
-    String expected = "Mhemed";
-    String actual = hashTable.find("mean");
-    assertEquals("tests find method",expected, actual);
-  }
-
-  @Test
-  public void testFindOfNotExistsWithCollision(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    hashTable.add("mean", "Mhemed");
-    String actual = hashTable.find("mena");
-    assertNull("tests find method", actual);
-  }
-
-  @Test
-  public void testContainsOfExists(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    boolean actual = hashTable.contains("name");
-    assertTrue("tests contains method",actual);
-  }
-
-  @Test
-  public void testContainsOfNotExists(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    String expected = "AbdalQader";
-    boolean actual = hashTable.contains("name2");
-    assertFalse("tests contains method",actual);
-  }
-
-  @Test
-  public void testContainsOfExistsWithCollision(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    hashTable.add("mean", "Mhemed");
-    boolean actual = hashTable.contains("mean");
-    assertTrue("tests contains method",actual);
-  }
-
-  @Test
-  public void testContainsOfNotExistsWithCollision(){
-    HashTable hashTable = new HashTable(10);
-    hashTable.add("name", "AbdalQader");
-    hashTable.add("mean", "Mhemed");
-    boolean actual = hashTable.contains("mena");
-    assertFalse("tests contains method",actual);
-  }
-
-  @Test
-  public void testIndexInRange(){
-     HashTable hashTable = new HashTable(10);
-     int index = hashTable.getHash("this key has an index in the range of 0 to 9");
-     assertTrue("test index in range", index >= 0 && index <= 9);
-  }
-
-
-  //-------------------------------- test repeated word ------------------------------------------//
-
-  @Test
-  public void testRepeatedWord1(){
-    String text = "Once upon a time, there was a brave princess who...";
-    String expected = "a";
-    String actual = RepeatedWord.getRepeatedWord(text);
-    assertEquals("tests a text if it has a repeated word", expected, actual);
-  }
-
-  @Test
-  public void testRepeatedWord2(){
-    String text = "It was the best of times, it was the worst of times, " +
-      "it was the age of wisdom, it was the age of foolishness, it was the epoch" +
-      " of belief, it was the epoch of incredulity, it was the season of Light, it was" +
-      " the season of Darkness, it was the spring of hope, it was the winter of despair," +
-      " we had everything before us, we had nothing before us, we were all going direct " +
-      "to Heaven, we were all going direct the other way – in short, the period was so far" +
-      " like the present period, that some of its noisiest authorities insisted on its being" +
-      " received, for good or for evil, in the superlative degree of comparison only...";
-    String expected = "it";
-    String actual = RepeatedWord.getRepeatedWord(text);
-    assertEquals("tests a text if it has a repeated word", expected, actual);
-  }
-
-  @Test
-  public void testRepeatedWord3(){
-    String text = "It was a queer, sultry summer, the summer they electrocuted the " +
-      "Rosenbergs, and I didn’t know what I was doing in New York...";
-    String expected = "summer";
-    String actual = RepeatedWord.getRepeatedWord(text);
-    assertEquals("tests a text if it has a repeated word", expected, actual);
-  }
-
-  @Test
-  public void testRepeatedWordOfEmpty(){
-    String text = "";
-    String expected = "";
-    String actual = RepeatedWord.getRepeatedWord(text);
-    assertEquals("tests a text if it has a repeated word", expected, actual);
-  }
-
-  @Test
-  public void testRepeatedWordOfUnique(){
-    String text = "I love you";
-    String actual = RepeatedWord.getRepeatedWord(text);
-    assertNull("tests a text if it has a repeated word", actual);
-  }
 
    //-------------------------------- test intersection trees ------------------------------------------//
 
@@ -1204,61 +629,5 @@ public class AppTest {
     assertEquals("test intersection of two tree", expected,actual.toString());
   }
 
-  //-------------------------------- test hash table left join ------------------------------------------//
 
-  @Test
-  public void testHashTable1(){
-    HashTable hashTable1 = new HashTable(10);
-    hashTable1.add("fond", "enamored");
-    hashTable1.add("wrath", "anger");
-    hashTable1.add("diligent", "employed");
-    hashTable1.add("outfit", "grab");
-    hashTable1.add("guide", "usher");
-    HashTable hashTable2 = new HashTable(10);
-    hashTable2.add("fond", "averse");
-    hashTable2.add("wrath", "delight");
-    hashTable2.add("diligent", "idle");
-    hashTable2.add("guide", "follow");
-    hashTable2.add("flow", "jam");
-    HashTable hashTable = LeftJoin.leftJoin(hashTable1, hashTable2);
-    String expected = "anger, delight";
-    assertEquals("test left join on hash tables", expected, hashTable.find("wrath"));
-  }
-  @Test
-  public void testHashTable2(){
-    HashTable hashTable1 = new HashTable(10);
-    hashTable1.add("fond", "enamored");
-    hashTable1.add("wrath", "anger");
-    hashTable1.add("diligent", "employed");
-    hashTable1.add("outfit", "grab");
-    hashTable1.add("guide", "usher");
-    HashTable hashTable2 = new HashTable(10);
-    hashTable2.add("fond", "averse");
-    hashTable2.add("wrath", "delight");
-    hashTable2.add("diligent", "idle");
-    hashTable2.add("guide", "follow");
-    hashTable2.add("flow", "jam");
-    HashTable hashTable = LeftJoin.leftJoin(hashTable1, hashTable2);
-    String expected = "grab, Null";
-    assertEquals("test left join on hash tables", expected, hashTable.find("outfit"));
-  }
-
-  @Test
-  public void testHashTable3(){
-    HashTable hashTable1 = new HashTable(10);
-    hashTable1.add("fond", "enamored");
-    hashTable1.add("wrath", "anger");
-    hashTable1.add("diligent", "employed");
-    hashTable1.add("outfit", "grab");
-    hashTable1.add("guide", "usher");
-    HashTable hashTable2 = new HashTable(10);
-    HashTable hashTable = LeftJoin.leftJoin(hashTable1, hashTable2);
-    String expected = "Bucket 0: [{wrath:anger, Null}]\n" +
-      "Bucket 3: [{fond:enamored, Null}]\n" +
-      "Bucket 6: [{guide:usher, Null}]\n" +
-      "Bucket 7: [{outfit:grab, Null}]\n" +
-      "Bucket 8: [{diligent:employed, Null}]\n";
-    assertEquals("test left join on hash tables", expected, LeftJoin.hashTableBuckets(hashTable));
-
-  }
 }
