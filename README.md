@@ -24,6 +24,8 @@
 | LeftJoin.java | [challenge_33](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/leftjoin/LeftJoin.java) |
 | Graph.java | [challenge_35](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/graph/Graph.java) |
 | BreadthFirst.java | [challenge_36](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/breadthfirst/BreadthFirst.java) |
+| GetEdges.java | [challenge_37](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/getedges/GetEdges.java) |
+| DepthFirst.java | [challenge_38](https://github.com/otator/data-structures-and-algorithms/blob/main/challenges/codes/app/src/main/DepthFirst/DepthFirst.java) |
 
 
 
