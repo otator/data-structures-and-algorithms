@@ -19,11 +19,11 @@ Edge cases:
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 Space complexity : 
- O(v) where v is the number of  city names (vertices) as a set of neighbors
+ O(v) where v is the number of  nodes (vertices) as a set of neighbors
 
 
 Time complity:
-O(E + V) -> where E is the number of edges and V is the number of city names (vertices)
+O(E + V) -> where E is the number of edges and V is the number of nodes (vertices)
 
 
 ## Solution
